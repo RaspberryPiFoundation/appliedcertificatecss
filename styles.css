@@ -1,0 +1,314 @@
+/* Style for Edly page title to match lesson title */
+.unit-title {
+	font-size: 1.8em !important;
+	font-family: 'Quicksand', sans-serif !important;
+	color: #CD2355 !important;
+	font-weight: 900 !important;
+	text-align: center !important;
+	margin-bottom: 20px !important;
+	box-sizing: border-box;
+}
+
+/* Lesson Heading */
+#rpf-lesson-title {
+	font-size: 1.8em !important;
+	font-family: 'Quicksand', sans-serif !important;
+	color: #CD2355 !important;
+	font-weight: 900 !important;
+	text-align: center !important;
+	margin-bottom: 20px !important;
+	box-sizing: border-box;
+}
+
+/* General Paragraph Text */
+.rpf-text {
+	font-size: 16px;
+	font-family: 'Quicksand', sans-serif !important;
+	color: #222222;
+	line-height: 1.6;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+/* Pseudo-element for the top-right text and icon */
+.learn::before, .notes::before, .task::before {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #afafaf;
+	font-size: 18px;
+	font-weight: 900; /* Solid icons */
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	font-family: "Font Awesome 6 Free"; /* Ensures you're using Font Awesome */
+}
+
+/* Adjust for each block type */
+.learn::before {
+	content: "LEARN \f212"; /* Book icon (Solid) */
+}
+
+.notes::before {
+	content: "NOTES \f27a"; /* Pencil icon (Solid) */
+}
+
+.task::before {
+	content: "TASK \f14a"; /* List icon (Solid) */
+}
+
+/* Notes Block */
+.notes {
+	position: relative;
+	padding: 60px 20px 20px 20px;
+	background-color: #E7F8F7;
+	border: 2px solid #0D7C71;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.notes h2 {
+	color: #0D7C71 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+/* body text for the NOtes, Task and Teach Blocks */
+.notes p, .task p, .teach p {
+	color: #222222 !important;
+	font-size: 16px !important;
+	font-family: 'Quicksand', sans-serif !important;
+	line-height: 1.6;
+	box-sizing: border-box;
+}
+
+/* Task Block */
+.task {
+	position: relative;
+	padding: 60px 20px 20px 20px;
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.task h2 {
+	color: #6C3687 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+/* Learn Block */
+.learn {
+	position: relative;
+	padding: 60px 20px 20px 20px;
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.learn h2 {
+	color: #CD2355 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box; 
+	margin-bottom: 15px;
+}
+
+/* Extra content padding to separate the pseudo-element */
+.learn p, .notes p, .task p {
+	margin-top: 60px; /* Adds space between the content and the pseudo-element */
+}
+
+/* Collapsible Button */
+details summary {
+	background-color: #232D9A;
+	color: white;
+	font-size: 20px;
+	font-family: 'Quicksand', sans-serif !important;
+	font-weight: bold;
+	padding: 14px 40px;
+	border-radius: 8px;
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+details[open] summary {
+	background-color: #232E9B;
+}
+
+details summary:hover {
+	background-color: #232E9B;
+}
+
+/* Collapsible Content */
+details .content {
+	background-color: #E7F8F7;
+	font-family: 'Quicksand', sans-serif !important;
+	padding: 10px;
+	border-left: 5px solid #CD2355;
+	margin-top: 5px;
+	border-radius: 8px;
+	color: #222222;
+	box-sizing: border-box;
+	width: 100%; /* Full width within the content box */
+	display: block;
+	margin-bottom: 15px; 
+	overflow: hidden;  /* Prevents overflowing elements */
+}
+
+.content iframe {
+	width: 100% !important;
+	max-width: 100% !important;  /* Prevent any width restrictions */
+	height: calc(100vw * 9 / 16);  /* Keep a 16:9 aspect ratio */
+	max-height: 700px;  /* Limit max height for larger screens */
+	margin: 0 auto !important;  /* Center the iframe */
+	padding: 0 !important;
+	border: none;
+}
+
+/* Specific adjustment for portrait documents */
+.content.portrait iframe {
+    height: calc(100vw * 16 / 9);  /* Inverts aspect ratio for portrait documents */
+}
+
+/* General Video Block Container */
+.xblock.xmodule_VideoBlock {
+	background-color: #F4EEF7;
+	padding: 20px;
+	border-radius: 8px;
+	box-sizing: border-box; 
+}
+
+/* Override the grey background on the video block */
+.xmodule_display.xmodule_VideoBlock .video {
+	background: #F4EEF7 !important;
+	margin: 0 !important;
+	padding: 12px !important;
+	border-radius: 5px !important;
+	outline: none !important;
+	box-sizing: border-box;
+}
+
+/* General Video Block Title */
+.xblock.xmodule_VideoBlock .hd-2 {
+	color: #CD2355;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	box-sizing: border-box;
+}
+
+/* General Transcript Container */
+.subtitles {
+	background-color: #FCF3F6;
+	padding: 15px;
+	color: #222222;
+	border-radius: 8px;
+	border-left: 5px solid #CD2355;
+	box-sizing: border-box;
+}
+
+/* Transcript text */
+.subtitles ol.subtitles-menu span {
+	color: #222222;
+	font-size: 16px;
+	font-family: 'Quicksand', sans-serif;
+	line-height: 1.6;
+	box-sizing: border-box;
+}
+
+/* Transcript Heading */
+.subtitles h3 {
+	color: #CD2355;
+	font-size: 18px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+	box-sizing: border-box;
+}
+
+/* Transcript Links (for skip to start/end) */
+.subtitles a {
+	color: #232e9b;
+	text-decoration: underline;
+	box-sizing: border-box; 
+}
+
+.subtitles a:hover {
+	color: #c51d4a;
+	box-sizing: border-box;
+}
+
+/* Images (centered) */
+.images {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px 0;
+	box-sizing: border-box;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Custom Link Styling */
+a {
+	color: #C51D4A;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+a:hover, a:active {
+	color: #232E9B;
+	box-sizing: border-box;
+}
+
+/* Table Styling */
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+	box-sizing: border-box;
+}
+
+.table th, 
+.table td {
+	border: 2px solid #222222;
+	padding: 10px;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+/* Unordered and Ordered List Styling */
+ul, ol {
+	color: #222222; /* Match body text color */
+	font-size: 16px; /* Same font size as body text */
+	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
+	line-height: 1.6; /* Match line-height for readability */
+	padding-left: 20px; /* Indent the list items */
+	margin-bottom: 20px; /* Add spacing after the list */
+}
+
+/* List items styling */
+ul li, ol li {
+	margin-bottom: 10px; /* Add some spacing between list items */
+}
