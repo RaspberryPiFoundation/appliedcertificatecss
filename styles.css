@@ -163,7 +163,7 @@ details summary:hover {
 
 /* Collapsible Content */
 details .content {
-	background-color: #E7F8F7;
+	background-color: ##F5F6F9;
 	font-family: 'Quicksand', sans-serif !important;
 	padding: 10px;
 	border-left: 5px solid #CD2355;
