@@ -48,23 +48,23 @@
 
 /* Adjust for each block type */
 .learn::before {
-	content: "LEARN \f212"; /* Book icon (Solid) */
+	content: "LEARN \f02d"; /* Book icon (Solid) */
 }
 
 .notes::before {
-	content: "NOTES \f27a"; /* Pencil icon (Solid) */
+	content: "NOTES \f27a"; /* Comment icon (Solid) */
 }
 
 .task::before {
-	content: "TASK \f14a"; /* List icon (Solid) */
+	content: "TASK \f14a"; /* Tick Box icon (Solid) */
 }
 
 /* Notes Block */
 .notes {
 	position: relative;
 	padding: 60px 20px 20px 20px;
-	background-color: #E7F8F7;
-	border: 2px solid #0D7C71;
+	background-color: #EDF7EE;
+	border: 2px solid #317C35;
 	padding: 20px;
 	border-radius: 8px;
 	margin-bottom: 20px;
@@ -72,7 +72,7 @@
 }
 
 .notes h2 {
-	color: #0D7C71 !important;
+	color: #317C35 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 24px !important;
 	font-weight: 700 !important;
@@ -163,7 +163,7 @@ details summary:hover {
 
 /* Collapsible Content */
 details .content {
-	background-color: ##F5F6F9;
+	background-color: #E7F8F7;
 	font-family: 'Quicksand', sans-serif !important;
 	padding: 10px;
 	border-left: 5px solid #CD2355;
