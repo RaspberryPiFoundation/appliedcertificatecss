@@ -300,15 +300,36 @@ a:hover, a:active {
 
 /* Unordered and Ordered List Styling */
 ul, ol {
-	color: #222222; /* Match body text color */
-	font-size: 16px; /* Same font size as body text */
-	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
-	line-height: 1.6; /* Match line-height for readability */
-	padding-left: 20px; /* Indent the list items */
-	margin-bottom: 20px; /* Add spacing after the list */
+    color: #222222; /* Match body text color */
+    font-size: 16px; /* Same font size as body text */
+    font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
+    line-height: 1.6; /* Match line-height for readability */
+    padding-left: 20px; /* Indent the list items */
+    margin-bottom: 20px; /* Add spacing after the list */
+    list-style: none; /* Remove default bullet points */
 }
 
-/* List items styling */
+/* Top-level list items styling */
+ul li::before, ol li::before {
+    content: "-"; /* Use hyphen as bullet */
+    color: #222222; /* Same color as text */
+    font-weight: bold; /* Bold bullet for emphasis */
+    display: inline-block;
+    width: 1em; /* Align text properly after bullet */
+    margin-right: 10px; /* Space between bullet and text */
+}
+
+/* Second-level list items styling */
+ul ul li::before, ol ol li::before {
+    content: "–"; /* Use en dash for second-level bullet */
+    color: #222222;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: 10px;
+}
+
+/* General list item styling */
 ul li, ol li {
-	margin-bottom: 10px; /* Add some spacing between list items */
+    margin-bottom: 10px; /* Add spacing between list items */
 }
