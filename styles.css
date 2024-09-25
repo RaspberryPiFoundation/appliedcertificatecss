@@ -304,9 +304,9 @@ ul, ol {
     font-size: 16px; /* Same font size as body text */
     font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
     line-height: 1.6; /* Match line-height for readability */
-    padding-left: 20px; /* Indent the list items */
+    padding-left: 40px; /* Indent the list items more */
     margin-bottom: 20px; /* Add spacing after the list */
-    list-style: none; /* Remove default bullet points */
+    list-style: initial; /* Restore the default bullet points */
 }
 
 /* General list item styling */
