@@ -37,20 +37,30 @@ input[type="text"] {
 }
 
 /* Button styles */
-button {
-  background-color: #242D9A; /* Main button color */
+.primary-button {
+  background-color: #242D9A; /* Main background color for buttons */
   color: white;
   border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 4px;
+  padding: 10px;
   cursor: pointer;
 }
 
-/* Hover effect for button */
-button:hover {
+.primary-button:hover {
   background-color: #1C267D; /* Hover color */
+}
+
+.disabled-button {
+  background-color: grey; /* Disabled button style */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: not-allowed;
+}
+
+.loading-button {
+  background-color: #46AF4B; /* Loading button color */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: not-allowed;
 }
