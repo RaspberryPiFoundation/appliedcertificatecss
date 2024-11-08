@@ -32,69 +32,70 @@
 
 /* Updated pseudo-element for the block title (top-left as a header, left-aligned) */
 .learn::before, .notes::before, .task::before {
-    display: block;
-    font-size: 18px;
-    font-weight: 900;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    font-family: "Font Awesome 6 Free";
-    text-align: left; /* Ensures the text is left-aligned */
+	display: block;
+	font-size: 18px;
+	font-weight: 900;
+	padding: 10px 15px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	font-family: "Font Awesome 6 Free";
+	text-align: left; /* Ensures the text is left-aligned */
 }
 
 /* Adjust each block title with specific text, icon, and color */
 .learn::before {
-    content: "\f02d  Learn"; /* Book icon */
-    color: #CD2355;
+	content: "\f02d  Learn"; /* Book icon */
+	color: #CD2355;
 }
 
 .notes::before {
-    content: "\f27a  Notes"; /* Comment icon */
-    color: #317C35;
+	content: "\f27a  Notes"; /* Comment icon */
+	color: #317C35;
 }
 
 .task::before {
-    content: "\f14a  Task"; /* Tick box icon */
-    color: #6B3687;
+	content: "\f14a  Task"; /* Tick box icon */
+	color: #6B3687;
 }
 
 /* Style adjustments for each block */
 .notes, .task, .learn {
-    position: relative;
-    padding-top: 20px; /* Add padding to make space for the "title" at the top */
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+	position: relative;
+	padding-top: 20px; /* Add padding to make space for the "title" at the top */
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
 }
 
 .notes {
-    background-color: #EDF7EE;
-    border: 2px solid #317C35;
+	background-color: #EDF7EE;
+	border: 2px solid #317C35;
 }
 
 .task {
-    background-color: #F4EEF7;
-    border: 2px solid #6B3687;
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
 }
 
 .learn {
-    background-color: #FCF3F6;
-    border: 2px solid #CD2355;
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
 }
 
 /* Style for headings within the blocks */
 .notes h2, .task h2, .learn h2 {
-    color: inherit;
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 24px !important;
-    font-weight: 700 !important;
-    box-sizing: border-box;
-    margin-bottom: 15px;
+	color: inherit;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
 }
 
 /* Ensure extra padding between the pseudo-element and the content */
 .learn p, .notes p, .task p {
-    margin-top: 10px; /* Adds space between the content and the title-like pseudo-element */
+	padding: 0 15px; /* Adds padding for the main content within the block */
+	margin-top: 10px; /* Adds space between the content and the title-like pseudo-element */
 }
 
 
