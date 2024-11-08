@@ -30,110 +30,71 @@
 	box-sizing: border-box;
 }
 
-/* Pseudo-element for the top-right text and icon */
+/* Updated pseudo-element for the block title (top-left as a header, left-aligned) */
 .learn::before, .notes::before, .task::before {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	color: #afafaf;
-	font-size: 18px;
-	font-weight: 900; /* Solid icons */
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	padding: 5px 10px;
-	box-sizing: border-box;
-	font-family: "Font Awesome 6 Free"; /* Ensures you're using Font Awesome */
+    display: block;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: "Font Awesome 6 Free";
+    text-align: left; /* Ensures the text is left-aligned */
 }
 
-/* Adjust for each block type */
+/* Adjust each block title with specific text, icon, and color */
 .learn::before {
-	content: "LEARN \f02d"; /* Book icon (Solid) */
+    content: "\f02d  Learn"; /* Book icon */
+    color: #CD2355;
 }
 
 .notes::before {
-	content: "NOTES \f27a"; /* Comment icon (Solid) */
+    content: "\f27a  Notes"; /* Comment icon */
+    color: #317C35;
 }
 
 .task::before {
-	content: "TASK \f14a"; /* Tick Box icon (Solid) */
+    content: "\f14a  Task"; /* Tick box icon */
+    color: #6B3687;
 }
 
-/* Notes Block */
+/* Style adjustments for each block */
+.notes, .task, .learn {
+    position: relative;
+    padding-top: 20px; /* Add padding to make space for the "title" at the top */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
 .notes {
-	position: relative;
-	padding: 60px 20px 20px 20px;
-	background-color: #EDF7EE;
-	border: 2px solid #317C35;
-	padding: 20px;
-	border-radius: 8px;
-	margin-bottom: 20px;
-	box-sizing: border-box;
+    background-color: #EDF7EE;
+    border: 2px solid #317C35;
 }
 
-.notes h2 {
-	color: #317C35 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 24px !important;
-	font-weight: 700 !important;
-	box-sizing: border-box;
-	margin-bottom: 15px;
-}
-
-/* body text for the NOtes, Task and Teach Blocks */
-.notes p, .task p, .teach p {
-	color: #222222 !important;
-	font-size: 16px !important;
-	font-family: 'Quicksand', sans-serif !important;
-	line-height: 1.6;
-	box-sizing: border-box;
-}
-
-/* Task Block */
 .task {
-	position: relative;
-	padding: 60px 20px 20px 20px;
-	background-color: #F4EEF7;
-	border: 2px solid #6B3687;
-	padding: 20px;
-	border-radius: 8px;
-	margin-bottom: 20px;
-	box-sizing: border-box;
+    background-color: #F4EEF7;
+    border: 2px solid #6B3687;
 }
 
-.task h2 {
-	color: #6C3687 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 24px !important;
-	font-weight: 700 !important;
-	box-sizing: border-box;
-	margin-bottom: 15px;
-}
-
-/* Learn Block */
 .learn {
-	position: relative;
-	padding: 60px 20px 20px 20px;
-	background-color: #FCF3F6;
-	border: 2px solid #CD2355;
-	padding: 20px;
-	border-radius: 8px;
-	margin-bottom: 20px;
-	box-sizing: border-box;
+    background-color: #FCF3F6;
+    border: 2px solid #CD2355;
 }
 
-.learn h2 {
-	color: #CD2355 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 24px !important;
-	font-weight: 700 !important;
-	box-sizing: border-box; 
-	margin-bottom: 15px;
+/* Style for headings within the blocks */
+.notes h2, .task h2, .learn h2 {
+    color: inherit;
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    box-sizing: border-box;
+    margin-bottom: 15px;
 }
 
-/* Extra content padding to separate the pseudo-element */
+/* Ensure extra padding between the pseudo-element and the content */
 .learn p, .notes p, .task p {
-	margin-top: 60px; /* Adds space between the content and the pseudo-element */
+    margin-top: 10px; /* Adds space between the content and the title-like pseudo-element */
 }
 
 /* Collapsible Button */
