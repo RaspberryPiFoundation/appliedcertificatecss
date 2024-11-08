@@ -42,59 +42,97 @@
     text-align: left; /* Ensures the text is left-aligned */
 }
 
-/* Adjust each block title with specific text, icon, and color */
+/* Adjust for each block type */
 .learn::before {
-    content: "\f02d  Learn"; /* Book icon */
-    color: #CD2355;
+	content: "f02d \Learn"; /* Book icon (Solid) */
+	color: #CD2355;
 }
 
 .notes::before {
-    content: "\f27a  Notes"; /* Comment icon */
-    color: #317C35;
+	content: "f27a \Notes"; /* Comment icon (Solid) */
+	color: #317C35;
 }
 
 .task::before {
-    content: "\f14a  Task"; /* Tick box icon */
-    color: #6B3687;
+	content: "f14a \Task"; /* Tick Box icon (Solid) */
+	color: #6B3687;
 }
 
-/* Style adjustments for each block */
-.notes, .task, .learn {
-    position: relative;
-    padding-top: 20px; /* Add padding to make space for the "title" at the top */
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
+/* Notes Block */
 .notes {
-    background-color: #EDF7EE;
-    border: 2px solid #317C35;
+	position: relative;
+	padding: 60px 20px 20px 20px;
+	background-color: #EDF7EE;
+	border: 2px solid #317C35;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
 }
 
+.notes h2 {
+	color: #317C35 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+/* body text for the NOtes, Task and Teach Blocks */
+.notes p, .task p, .teach p {
+	color: #222222 !important;
+	font-size: 16px !important;
+	font-family: 'Quicksand', sans-serif !important;
+	line-height: 1.6;
+	box-sizing: border-box;
+}
+
+/* Task Block */
 .task {
-    background-color: #F4EEF7;
-    border: 2px solid #6B3687;
+	position: relative;
+	padding: 60px 20px 20px 20px;
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
 }
 
+.task h2 {
+	color: #6C3687 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+/* Learn Block */
 .learn {
-    background-color: #FCF3F6;
-    border: 2px solid #CD2355;
+	position: relative;
+	padding: 60px 20px 20px 20px;
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
 }
 
-/* Style for headings within the blocks */
-.notes h2, .task h2, .learn h2 {
-    color: inherit;
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 24px !important;
-    font-weight: 700 !important;
-    box-sizing: border-box;
-    margin-bottom: 15px;
+.learn h2 {
+	color: #CD2355 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box; 
+	margin-bottom: 15px;
 }
 
-/* Ensure extra padding between the pseudo-element and the content */
+/* Extra content padding to separate the pseudo-element */
 .learn p, .notes p, .task p {
-    margin-top: 10px; /* Adds space between the content and the title-like pseudo-element */
+	margin-top: 10px; /* Adds space between the content and the pseudo-element */
 }
 
 /* Collapsible Button */
