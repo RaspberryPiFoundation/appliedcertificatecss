@@ -30,16 +30,19 @@
 	box-sizing: border-box;
 }
 
-/* Updated pseudo-element for the block title (top-left as a header, left-aligned) */
+/* Pseudo-element for the top-right text and icon */
 .learn::before, .notes::before, .task::before {
-    display: block;
-    font-size: 18px;
-    font-weight: 900;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    font-family: "Font Awesome 6 Free";
-    text-align: left; /* Ensures the text is left-aligned */
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 18px;
+	font-weight: 900; /* Solid icons */
+	display: flex;
+	align-items: left;
+	justify-content: flex-start;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	font-family: "Font Awesome 6 Free"; /* Ensures you're using Font Awesome */
 }
 
 /* Adjust for each block type */
