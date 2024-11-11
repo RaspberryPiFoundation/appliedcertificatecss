@@ -42,6 +42,13 @@
 	text-align: left; /* Ensures the text is left-aligned */
 }
 
+/* Consistent padding for all content within the blocks */
+.learn > *, .notes > *, .task > * {
+    padding: 0 15px; /* Apply horizontal padding */
+    margin-top: 10px; /* Add vertical spacing between elements */
+    box-sizing: border-box;
+}
+
 /* Adjust each block title with specific text, icon, and color */
 .learn::before {
 	content: "\f02d  Learn"; /* Book icon */
@@ -276,14 +283,15 @@ a:hover, a:active {
 	box-sizing: border-box;
 }
 
-/* Unordered and Ordered List Styling */
+/* Specific adjustments for lists to ensure alignment with other text */
 ul, ol {
     color: #222222 !important; /* Match body text color */
     font-size: 16px; /* Same font size as body text */
     font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
     line-height: 1.6 !important; /* Match line-height for readability */
-    padding-left: 60px !important; /* Indent the list items more */
+    padding-left: 20px !important; /* Indent the list items */
     margin-bottom: 20px !important; /* Add spacing after the list */
+    list-style: disc; /* Add default bullet points */
 }
 
 /* General list item styling */
