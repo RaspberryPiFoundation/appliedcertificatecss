@@ -32,18 +32,47 @@
 	box-sizing: border-box;
 }
 
-/* Updated pseudo-element for the block title (icon and text separately styled) */
+/* Updated pseudo-element for block title with icon and text */
 .learn::before, .notes::before, .task::before {
-	display: flex;
-	align-items: center;
-	font-size: 18px;
-	font-weight: 900;
-	padding: 10px 15px;
-	margin-bottom: 10px;
-	box-sizing: border-box;
-	text-align: left; /* Left-align the text */
+	display: flex; /* Align icon and text horizontally */
+	align-items: center; /* Center align icon and text vertically */
+	gap: 10px; /* Add spacing between icon and text */
+	font-size: 20px; /* Adjust size for prominence */
+	font-weight: 900; /* Make the text bold */
+	padding: 10px 15px; /* Add padding around the title */
+	margin-bottom: 10px; /* Add spacing below the title */
+	text-align: left; /* Ensure left alignment */
+	text-transform: none; /* Keep Title Case for text */
+}
+
+/* Icon styling */
+.learn::before {
+	content: "\f02d"; /* Book icon */
+	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for the icon */
+	font-size: 24px; /* Slightly larger size for the icon */
+	color: #CD2355; /* Icon color */
+}
+
+.notes::before {
+	content: "\f27a"; /* Comment icon */
+	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for the icon */
+	font-size: 24px; /* Slightly larger size for the icon */
+	color: #317C35; /* Icon color */
+}
+
+.task::before {
+	content: "\f14a"; /* Tick box icon */
+	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for the icon */
+	font-size: 24px; /* Slightly larger size for the icon */
+	color: #6B3687; /* Icon color */
+}
+
+/* Title text styling */
+.learn span, .notes span, .task span {
 	font-family: 'Quicksand', sans-serif; /* Use Quicksand for the text */
-	text-transform: none; /* Enforce no text-transform */
+	font-size: 20px; /* Match the text size */
+	color: inherit; /* Inherit color from the parent block */
+	font-weight: 900; /* Bold text */
 }
 
 /* Consistent padding for all content within the blocks */
@@ -51,44 +80,6 @@
 	padding: 0 15px; /* Apply horizontal padding */
 	margin-top: 10px; /* Add vertical spacing between elements */
 	box-sizing: border-box;
-}
-
-/* Icon for each block (added with :before content) */
-.learn::before::before, .notes::before::before, .task::before::before {
-	font-family: "Font Awesome 6 Free"; /* Icon font */
-	font-weight: 900;
-	margin-right: 10px; /* Space between icon and text */
-}
-
-.learn::before::before {
-	content: "\f02d"; /* Book icon */
-	color: #CD2355;
-}
-
-.notes::before::before {
-	content: "\f27a"; /* Comment icon */
-	color: #317C35;
-}
-
-.task::before::before {
-	content: "\f14a"; /* Tick box icon */
-	color: #6B3687;
-}
-
-/* Add text for each block title */
-.learn::before {
-	content: "Learn"; /* Block name text */
-	color: #CD2355;
-}
-
-.notes::before {
-	content: "Notes"; /* Block name text */
-	color: #317C35;
-}
-
-.task::before {
-	content: "Task"; /* Block name text */
-	color: #6B3687;
 }
 
 /* Style adjustments for each block */
