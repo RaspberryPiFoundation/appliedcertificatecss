@@ -1,4 +1,4 @@
-/* Style for Edly page title to match lesson title */
+`/* Style for Edly page title to match lesson title */
 .unit-title {
 	font-size: 1.8em !important;
 	font-family: 'Quicksand', sans-serif !important;
@@ -30,7 +30,9 @@
 	margin-bottom: 20px;
 	box-sizing: border-box;
 	font-family: 'Quicksand', sans-serif !important; /* Consistent font */
-	padding: 0 15px; /* Horizontal padding for block content */
+	color: #646464; /* Default text color */
+	font-size: 16px; /* Default text size */
+	line-height: 1.6; /* Default line height */
 }
 
 /* Icon styles (Font Awesome) */
@@ -91,31 +93,49 @@
 	content: "\f14a"; /* Tick box icon */
 }
 
-/* Style for headings within the blocks */
-.notes h2, .task h2, .learn h2 {
-	color: inherit;
+/* Heading styles within blocks */
+.learn h2, .notes h2, .task h2 {
+	color: #CD2355; /* Heading color */
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 24px;
-	font-weight: 700;
-	margin-bottom: 15px;
+	font-size: 20px; /* Font size */
+	font-weight: 700; /* Bold */
+	margin-bottom: 15px; /* Spacing below heading */
 	text-transform: none; /* Ensure Title Case */
 }
 
-/* Global heading styles to remove uppercase enforcement */
+.learn h3, .notes h3, .task h3 {
+	color: #646464; /* Heading color */
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 18px; /* Font size */
+	font-weight: 700; /* Bold */
+	margin-bottom: 10px; /* Spacing below heading */
+	text-transform: none; /* Ensure Title Case */
+}
+
+/* Ensure global Title Case for all headings */
 h1, h2, h3, h4, h5, h6 {
 	text-transform: none !important;
 	font-family: 'Quicksand', sans-serif !important;
+	color: inherit; /* Match block or general text color */
+}
+
+/* Default text styles for all content in blocks */
+.learn, .notes, .task {
+	font-size: 16px;
+	font-family: 'Quicksand', sans-serif !important; /* Default font */
+	color: #646464; /* Default text color */
+	line-height: 1.6; /* Ensure readability */
 }
 
 /* List styling within blocks */
 .learn ul, .learn ol, .notes ul, .notes ol, .task ul, .task ol {
-	color: #222222; /* Match text color */
+	color: #646464; /* Match default text color */
 	font-size: 16px; /* Consistent font size */
 	font-family: 'Quicksand', sans-serif !important;
 	line-height: 1.6;
 	margin: 10px 0 20px 40px; /* Proper indentation */
-	padding-left: 0; /* Reset default padding */
 	list-style: disc; /* Standard bullet style */
+	padding-left: 0; /* Reset default padding */
 }
 
 .learn li, .notes li, .task li {
@@ -125,11 +145,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Ensure proper paragraph styling within blocks */
 .learn p, .notes p, .task p {
 	font-family: 'Quicksand', sans-serif !important; /* Ensure consistent font */
-	color: #222222; /* Consistent text color */
+	color: #646464; /* Consistent text color */
 	line-height: 1.6; /* Consistent line height */
 	margin: 10px 0; /* Spacing between paragraphs */
 }
-
 
 /* Collapsible Button */
 details summary {
