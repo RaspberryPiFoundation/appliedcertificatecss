@@ -32,78 +32,67 @@
 	box-sizing: border-box;
 }
 
-/* Pseudo-element for the icon only */
-.learn::before, .notes::before, .task::before {
-	display: inline-block; /* Ensure the icon behaves as inline with the text */
-	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for the icon */
-	font-weight: 900; /* Solid style for icons */
-	font-size: 18px; /* Size of the icon */
-	vertical-align: middle; /* Align icon vertically with the text */
-	margin-right: 8px; /* Add space between the icon and the text */
-	color: inherit; /* Use the same color as the parent element */
-}
-
-/* Icon and color for each block */
-.learn::before {
-	content: "\f02d"; /* Book icon */
-	color: #CD2355; /* Matches the Learn block color */
-}
-
-.notes::before {
-	content: "\f27a"; /* Comment icon */
-	color: #317C35; /* Matches the Notes block color */
-}
-
-.task::before {
-	content: "\f14a"; /* Check icon */
-	color: #6B3687; /* Matches the Task block color */
-}
-
-/* Style for the block titles */
-.learn-title, .notes-title, .task-title {
-	display: inline-block; /* Ensures proper alignment next to the icon */
-	font-family: 'Quicksand', sans-serif; /* Use the desired font for text */
-	font-size: 20px; /* Increase size for prominence */
-	font-weight: bold; /* Make it bold */
-	color: inherit; /* Match the icon color */
-	vertical-align: middle; /* Align text vertically with the icon */
-}
-
-/* Add spacing to the overall block */
+/* General block titles (icon and text alignment) */
 .learn, .notes, .task {
-	padding-top: 20px; /* Ensures spacing at the top for the title */
-}
-
-/* Consistent padding for all content within the blocks */
-.learn > *, .notes > *, .task > * {
-	padding: 0 15px; /* Apply horizontal padding */
-	margin-top: 10px; /* Add vertical spacing between elements */
-	box-sizing: border-box;
-}
-
-/* Style adjustments for each block */
-.notes, .task, .learn {
 	position: relative;
-	padding-top: 20px; /* Add padding to make space for the "title" at the top */
+	padding-top: 20px; /* Padding for spacing */
 	border-radius: 8px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
-	font-family: 'Quicksand', sans-serif !important;
+	font-family: 'Quicksand', sans-serif !important; /* Consistent font */
+}
+
+/* Icon and text alignment */
+.learn::before, .notes::before, .task::before {
+	font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
+	font-weight: 900; /* Use solid icons */
+	font-size: 24px; /* Icon size */
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	color: inherit; /* Match the block's color */
+}
+
+/* Add title text next to the icon */
+.learn::after, .notes::after, .task::after {
+	content: attr(data-title); /* Pull text dynamically */
+	position: absolute;
+	top: 10px;
+	left: 50px; /* Spaced to the right of the icon */
+	font-size: 20px; /* Title size */
+	font-weight: 700; /* Bold text */
+	color: inherit; /* Match the block's color */
+}
+
+/* Block-specific styles */
+.learn {
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
+	color: #CD2355; /* Match title text and icon to the block */
+}
+
+.learn::before {
+	content: "\f02d"; /* Book icon */
 }
 
 .notes {
 	background-color: #EDF7EE;
 	border: 2px solid #317C35;
+	color: #317C35;
+}
+
+.notes::before {
+	content: "\f27a"; /* Comment icon */
 }
 
 .task {
 	background-color: #F4EEF7;
 	border: 2px solid #6B3687;
+	color: #6B3687;
 }
 
-.learn {
-	background-color: #FCF3F6;
-	border: 2px solid #CD2355;
+.task::before {
+	content: "\f14a"; /* Tick box icon */
 }
 
 /* Style for headings within the blocks */
