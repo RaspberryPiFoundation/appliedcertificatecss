@@ -7,6 +7,7 @@
 	text-align: center !important;
 	margin-bottom: 20px !important;
 	box-sizing: border-box;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* Lesson Heading */
@@ -18,6 +19,7 @@
 	text-align: center !important;
 	margin-bottom: 20px !important;
 	box-sizing: border-box;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* General Paragraph Text */
@@ -40,6 +42,7 @@
 	box-sizing: border-box;
 	font-family: "Font Awesome 6 Free";
 	text-align: left; /* Ensures the text is left-aligned */
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* Consistent padding for all content within the blocks */
@@ -98,6 +101,12 @@
 	font-weight: 700 !important;
 	box-sizing: border-box;
 	margin-bottom: 15px;
+	text-transform: none !important; /* Remove forced uppercase */
+}
+
+/* Ensure global Title Case for all headings */
+h1, h2, h3, h4, h5, h6 {
+    text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* Ensure extra padding between the pseudo-element and the content */
@@ -216,6 +225,7 @@ details .content {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 700;
 	box-sizing: border-box;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* Transcript Links (for skip to start/end) */
@@ -287,7 +297,7 @@ a:hover, a:active {
 /* Specific adjustments for lists to ensure alignment with other text */
 ul, ol {
     color: #222222 !important; /* Match body text color */
-    font-size: 16px; /* Same font size as body text */
+    font-size: 16px !important; /* Same font size as body text */
     font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
     line-height: 1.6 !important; /* Match line-height for readability */
     padding-left: 20px !important; /* Indent the list items */
