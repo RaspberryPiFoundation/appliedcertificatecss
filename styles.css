@@ -57,7 +57,7 @@
 
 /* Spacing between title and content */
 .learn > *, .notes > *, .task > * {
-	margin-top: 40px !important; /* Add vertical spacing between title and content */
+	margin-top: 60px !important; /* Add vertical spacing between title and content */
 }
 
 /* Specific block styles */
