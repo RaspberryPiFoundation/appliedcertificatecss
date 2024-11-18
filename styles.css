@@ -32,47 +32,46 @@
 	box-sizing: border-box;
 }
 
-/* Updated pseudo-element for block title with icon and text */
+/* Pseudo-element for the icon only */
 .learn::before, .notes::before, .task::before {
-	display: flex; /* Align icon and text horizontally */
-	align-items: center; /* Center align icon and text vertically */
-	gap: 10px; /* Add spacing between icon and text */
-	font-size: 20px; /* Adjust size for prominence */
-	font-weight: 900; /* Make the text bold */
-	padding: 10px 15px; /* Add padding around the title */
-	margin-bottom: 10px; /* Add spacing below the title */
-	text-align: left; /* Ensure left alignment */
-	text-transform: none; /* Keep Title Case for text */
+	display: inline-block; /* Ensure the icon behaves as inline with the text */
+	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for the icon */
+	font-weight: 900; /* Solid style for icons */
+	font-size: 18px; /* Size of the icon */
+	vertical-align: middle; /* Align icon vertically with the text */
+	margin-right: 8px; /* Add space between the icon and the text */
+	color: inherit; /* Use the same color as the parent element */
 }
 
-/* Icon styling */
+/* Icon and color for each block */
 .learn::before {
 	content: "\f02d"; /* Book icon */
-	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for the icon */
-	font-size: 24px; /* Slightly larger size for the icon */
-	color: #CD2355; /* Icon color */
+	color: #CD2355; /* Matches the Learn block color */
 }
 
 .notes::before {
 	content: "\f27a"; /* Comment icon */
-	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for the icon */
-	font-size: 24px; /* Slightly larger size for the icon */
-	color: #317C35; /* Icon color */
+	color: #317C35; /* Matches the Notes block color */
 }
 
 .task::before {
-	content: "\f14a"; /* Tick box icon */
-	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for the icon */
-	font-size: 24px; /* Slightly larger size for the icon */
-	color: #6B3687; /* Icon color */
+	content: "\f14a"; /* Check icon */
+	color: #6B3687; /* Matches the Task block color */
 }
 
-/* Title text styling */
-.learn span, .notes span, .task span {
-	font-family: 'Quicksand', sans-serif; /* Use Quicksand for the text */
-	font-size: 20px; /* Match the text size */
-	color: inherit; /* Inherit color from the parent block */
-	font-weight: 900; /* Bold text */
+/* Style for the block titles */
+.learn-title, .notes-title, .task-title {
+	display: inline-block; /* Ensures proper alignment next to the icon */
+	font-family: 'Quicksand', sans-serif; /* Use the desired font for text */
+	font-size: 20px; /* Increase size for prominence */
+	font-weight: bold; /* Make it bold */
+	color: inherit; /* Match the icon color */
+	vertical-align: middle; /* Align text vertically with the icon */
+}
+
+/* Add spacing to the overall block */
+.learn, .notes, .task {
+	padding-top: 20px; /* Ensures spacing at the top for the title */
 }
 
 /* Consistent padding for all content within the blocks */
