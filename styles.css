@@ -56,16 +56,19 @@
 .learn::before {
 	content: "\f02d  Learn"; /* Book icon */
 	color: #CD2355;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 .notes::before {
 	content: "\f27a  Notes"; /* Comment icon */
 	color: #317C35;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 .task::before {
 	content: "\f14a  Task"; /* Tick box icon */
 	color: #6B3687;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* Style adjustments for each block */
