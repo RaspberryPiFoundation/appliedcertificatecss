@@ -32,43 +32,63 @@
 	box-sizing: border-box;
 }
 
-/* Updated pseudo-element for the block title (top-left as a header, left-aligned) */
+/* Updated pseudo-element for the block title (icon and text separately styled) */
 .learn::before, .notes::before, .task::before {
-	display: block;
+	display: flex;
+	align-items: center;
 	font-size: 18px;
 	font-weight: 900;
 	padding: 10px 15px;
 	margin-bottom: 10px;
 	box-sizing: border-box;
-	font-family: "Font Awesome 6 Free";
-	text-align: left; /* Ensures the text is left-aligned */
-	text-transform: none !important; /* Remove forced uppercase */
+	text-align: left; /* Left-align the text */
+	font-family: 'Quicksand', sans-serif; /* Use Quicksand for the text */
+	text-transform: none; /* Enforce no text-transform */
 }
 
 /* Consistent padding for all content within the blocks */
 .learn > *, .notes > *, .task > * {
-    padding: 0 15px; /* Apply horizontal padding */
-    margin-top: 10px; /* Add vertical spacing between elements */
-    box-sizing: border-box;
+	padding: 0 15px; /* Apply horizontal padding */
+	margin-top: 10px; /* Add vertical spacing between elements */
+	box-sizing: border-box;
 }
 
-/* Adjust each block title with specific text, icon, and color */
-.learn::before {
-	content: "\f02d  Learn"; /* Book icon */
+/* Icon for each block (added with :before content) */
+.learn::before::before, .notes::before::before, .task::before::before {
+	font-family: "Font Awesome 6 Free"; /* Icon font */
+	font-weight: 900;
+	margin-right: 10px; /* Space between icon and text */
+}
+
+.learn::before::before {
+	content: "\f02d"; /* Book icon */
 	color: #CD2355;
-	text-transform: none !important; /* Remove forced uppercase */
+}
+
+.notes::before::before {
+	content: "\f27a"; /* Comment icon */
+	color: #317C35;
+}
+
+.task::before::before {
+	content: "\f14a"; /* Tick box icon */
+	color: #6B3687;
+}
+
+/* Add text for each block title */
+.learn::before {
+	content: "Learn"; /* Block name text */
+	color: #CD2355;
 }
 
 .notes::before {
-	content: "\f27a  Notes"; /* Comment icon */
+	content: "Notes"; /* Block name text */
 	color: #317C35;
-	text-transform: none !important; /* Remove forced uppercase */
 }
 
 .task::before {
-	content: "\f14a  Task"; /* Tick box icon */
+	content: "Task"; /* Block name text */
 	color: #6B3687;
-	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* Style adjustments for each block */
@@ -109,7 +129,7 @@
 
 /* Ensure global Title Case for all headings */
 h1, h2, h3, h4, h5, h6 {
-    text-transform: none !important; /* Remove forced uppercase */
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* Ensure extra padding between the pseudo-element and the content */
@@ -172,7 +192,7 @@ details .content {
 
 /* Specific adjustment for portrait documents */
 .content.portrait iframe {
-    height: calc(100vw * 16 / 9);  /* Inverts aspect ratio for portrait documents */
+	height: calc(100vw * 16 / 9);  /* Inverts aspect ratio for portrait documents */
 }
 
 /* General Video Block Container */
@@ -245,28 +265,28 @@ details .content {
 
 /* Style for the image container */
 .image-container {
-    text-align: center; /* Centers the image and the caption */
-    margin-bottom: 20px; /* Adds space below the image */
+	text-align: center; /* Centers the image and the caption */
+	margin-bottom: 20px; /* Adds space below the image */
 }
 
 /* Style for the image */
 .images {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 5px; /* Small padding below the image */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	height: auto;
+	padding-bottom: 5px; /* Small padding below the image */
 }
 
 /* Style for the image caption */
 .image-caption {
-    font-size: 12px; /* Makes the caption smaller */
-    font-family: 'Quicksand', sans-serif !important;
-    color: #777; /* Muted text color */
-    text-align: center;
-    margin-top: 5px; /* Small margin between the image and caption */
-    padding: 0; /* Minimal padding */
+	font-size: 12px; /* Makes the caption smaller */
+	font-family: 'Quicksand', sans-serif !important;
+	color: #777; /* Muted text color */
+	text-align: center;
+	margin-top: 5px; /* Small margin between the image and caption */
+	padding: 0; /* Minimal padding */
 }
 
 /* Custom Link Styling */
@@ -299,16 +319,16 @@ a:hover, a:active {
 
 /* Specific adjustments for lists to ensure alignment with other text */
 ul, ol {
-    color: #222222 !important; /* Match body text color */
-    font-size: 16px !important; /* Same font size as body text */
-    font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
-    line-height: 1.6 !important; /* Match line-height for readability */
-    padding-left: 20px !important; /* Indent the list items */
-    margin-bottom: 20px !important; /* Add spacing after the list */
-    list-style: disc; /* Add default bullet points */
+	color: #222222 !important; /* Match body text color */
+	font-size: 16px !important; /* Same font size as body text */
+	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
+	line-height: 1.6 !important; /* Match line-height for readability */
+	padding-left: 20px !important; /* Indent the list items */
+	margin-bottom: 20px !important; /* Add spacing after the list */
+	list-style: disc; /* Add default bullet points */
 }
 
 /* General list item styling */
 ul li, ol li {
-    margin-bottom: 10px; /* Add spacing between list items */
+	margin-bottom: 10px; /* Add spacing between list items */
 }
