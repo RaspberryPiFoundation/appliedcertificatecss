@@ -26,99 +26,103 @@
 	font-family: 'Quicksand', sans-serif !important;
 	color: #222222;
 	line-height: 1.6;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	box-sizing: border-box;
 }
 
 /* General block titles (icon and text alignment) */
 .learn, .notes, .task {
-    position: relative;
-    padding-top: 20px; /* Padding for spacing */
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif !important; /* Consistent font */
+	position: relative;
+	padding-top: 20px; /* Padding for spacing */
+	border-radius: 8px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif !important; /* Consistent font */
 }
 
 /* Icon and text alignment */
 .learn::before, .notes::before, .task::before {
-    font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
-    font-weight: 900; /* Use solid icons */
-    font-size: 24px; /* Icon size */
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    color: inherit; /* Match the block's color */
+	font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
+	font-weight: 900; /* Use solid icons */
+	font-size: 24px; /* Icon size */
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	color: inherit; /* Match the block's color */
+	margin-bottom: 20px !important;
 }
 
 /* Add title text next to the icon */
 .learn::after, .notes::after, .task::after {
-    content: attr(data-title); /* Pull text dynamically */
-    position: absolute;
-    top: 10px;
-    left: 50px; /* Spaced to the right of the icon */
-    font-size: 20px; /* Title size */
-    font-weight: 700; /* Bold text */
-    color: inherit; /* Match the block's color */
+	content: attr(data-title); /* Pull text dynamically */
+	position: absolute;
+	top: 10px;
+	left: 50px; /* Spaced to the right of the icon */
+	font-size: 20px; /* Title size */
+	font-weight: 700; /* Bold text */
+	color: inherit; /* Match the block's color */
+	margin-bottom: 20px !important;
 }
 
 /* Block-specific styles */
 .learn {
-    background-color: #FCF3F6;
-    border: 2px solid #CD2355;
-    color: #CD2355; /* Match title text and icon to the block */
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
+	color: #CD2355; /* Match title text and icon to the block */
 }
 
 .learn::before {
-    content: "\f02d"; /* Book icon */
+	content: "\f02d"; /* Book icon */
 }
 
 .notes {
-    background-color: #EDF7EE;
-    border: 2px solid #317C35;
-    color: #317C35;
+	background-color: #EDF7EE;
+	border: 2px solid #317C35;
+	color: #317C35;
 }
 
 .notes::before {
-    content: "\f27a"; /* Comment icon */
+	content: "\f27a"; /* Comment icon */
 }
 
 .task {
-    background-color: #F4EEF7;
-    border: 2px solid #6B3687;
-    color: #6B3687;
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
+	color: #6B3687;
 }
 
 .task::before {
-    content: "\f14a"; /* Tick box icon */
+	content: "\f14a"; /* Tick box icon */
 }
 
 /* Style for headings within the blocks */
 .notes h2, .task h2, .learn h2 {
-	color: inherit;
+	color: inherit !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 20px !important;
 	font-weight: 900 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-top: 0 !important; /* No extra space above */
+	margin-bottom: 10px !important;
 	text-transform: none !important; /* Keep Title Case for text */
 }
 
 /* Style for headings within the blocks */
 .notes h3, .task h3, .learn h3 {
-	color: inherit;
+	color: inherit !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 18px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-top: 0 !important; /* No extra space above */
+	margin-bottom: 10px !important;
 	text-transform: none !important; /* Keep Title Case for text */
 }
 
 /* Add spacing between title and block content */
 .learn > *, .notes > *, .task > * {
-	margin-top: 60px !important; /* Increased vertical spacing between title and content */
-	padding-left: 15px !important;
+	margin-top: 20px !important; /* Increased vertical spacing between title and content */
+	padding-left: 20px !important;
 }
 
 
@@ -175,7 +179,7 @@ details .content {
 
 /* Specific adjustment for portrait documents */
 .content.portrait iframe {
-    height: calc(100vw * 16 / 9);  /* Inverts aspect ratio for portrait documents */
+	height: calc(100vw * 16 / 9);  /* Inverts aspect ratio for portrait documents */
 }
 
 /* General Video Block Container */
@@ -247,28 +251,28 @@ details .content {
 
 /* Style for the image container */
 .image-container {
-    text-align: center; /* Centers the image and the caption */
-    margin-bottom: 20px; /* Adds space below the image */
+	text-align: center; /* Centers the image and the caption */
+	margin-bottom: 20px; /* Adds space below the image */
 }
 
 /* Style for the image */
 .images {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 5px; /* Small padding below the image */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	height: auto;
+	padding-bottom: 5px; /* Small padding below the image */
 }
 
 /* Style for the image caption */
 .image-caption {
-    font-size: 12px; /* Makes the caption smaller */
-    font-family: 'Quicksand', sans-serif !important;
-    color: #777; /* Muted text color */
-    text-align: center;
-    margin-top: 5px; /* Small margin between the image and caption */
-    padding: 0; /* Minimal padding */
+	font-size: 12px; /* Makes the caption smaller */
+	font-family: 'Quicksand', sans-serif !important;
+	color: #777; /* Muted text color */
+	text-align: center;
+	margin-top: 5px; /* Small margin between the image and caption */
+	padding: 0; /* Minimal padding */
 }
 
 /* Custom Link Styling */
@@ -301,16 +305,16 @@ a:hover, a:active {
 
 /* Specific adjustments for lists to ensure alignment with other text */
 ul, ol {
-    color: #222222 !important; /* Match body text color */
-    font-size: 16px; /* Same font size as body text */
-    font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
-    line-height: 1.6 !important; /* Match line-height for readability */
-    padding-left: 20px !important; /* Indent the list items */
-    margin-bottom: 20px !important; /* Add spacing after the list */
-    list-style: disc; /* Add default bullet points */
+	color: #222222 !important; /* Match body text color */
+	font-size: 16px; /* Same font size as body text */
+	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
+	line-height: 1.6 !important; /* Match line-height for readability */
+	padding-left: 20px !important; /* Indent the list items */
+	margin-bottom: 20px !important; /* Add spacing after the list */
+	list-style: disc; /* Add default bullet points */
 }
 
 /* General list item styling */
 ul li, ol li {
-    margin-bottom: 10px; /* Add spacing between list items */
+	margin-bottom: 10px; /* Add spacing between list items */
 }
