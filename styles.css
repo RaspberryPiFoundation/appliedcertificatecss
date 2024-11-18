@@ -30,15 +30,15 @@
 	margin-bottom: 20px;
 	box-sizing: border-box;
 	font-family: 'Quicksand', sans-serif !important; /* Consistent font */
-	color: #646464; /* Default text color */
-	font-size: 16px; /* Default text size */
-	line-height: 1.6; /* Default line height */
+	color: #646464  !important; /* Default text color */
+	font-size: 16px  !important; /* Default text size */
+	line-height: 1.6  !important; /* Default line height */
 }
 
 /* Icon styles (Font Awesome) */
 .learn::before, .notes::before, .task::before {
 	font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
-	font-weight: 900; /* Use solid icons */
+	font-weight: 900 ; /* Use solid icons */
 	font-size: 24px; /* Icon size */
 	position: absolute;
 	top: 15px;
@@ -52,8 +52,8 @@
 	position: absolute;
 	top: 15px;
 	left: 60px; /* Spaced to the right of the icon */
-	font-size: 22px; /* Title size */
-	font-weight: 700; /* Bold text */
+	font-size: 22px  !important; /* Title size */
+	font-weight: 700  !important; /* Bold text */
 	color: inherit; /* Match the block's color */
 }
 
@@ -76,7 +76,7 @@
 .notes {
 	background-color: #EDF7EE;
 	border: 2px solid #317C35;
-	color: #317C35;
+	color: #317C35; /* Title text and icon color */
 }
 
 .notes::before {
@@ -86,7 +86,7 @@
 .task {
 	background-color: #F4EEF7;
 	border: 2px solid #6B3687;
-	color: #6B3687;
+	color: #6B3687; /* Title text and icon color */
 }
 
 .task::before {
@@ -95,59 +95,56 @@
 
 /* Heading styles within blocks */
 .learn h2, .notes h2, .task h2 {
-	color: #CD2355; /* Heading color */
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 20px; /* Font size */
-	font-weight: 700; /* Bold */
-	margin-bottom: 15px; /* Spacing below heading */
-	text-transform: none; /* Ensure Title Case */
+	font-size: 20px  !important; /* Font size */
+	font-weight: 700  !important; /* Bold */
+	margin: 10px 0  !important; /* Reduced margin */
+	color: inherit; /* Match block's color */
 }
 
 .learn h3, .notes h3, .task h3 {
-	color: #646464; /* Heading color */
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 18px; /* Font size */
-	font-weight: 700; /* Bold */
-	margin-bottom: 10px; /* Spacing below heading */
-	text-transform: none; /* Ensure Title Case */
+	font-size: 18px  !important; /* Slightly smaller than h2 */
+	font-weight: 700  !important; /* Bold */
+	margin: 10px 0  !important; /* Reduced margin */
+	color: #646464  !important; /* Default text color for h3 */
 }
 
-/* Ensure global Title Case for all headings */
+/* Global heading styles to remove uppercase enforcement */
 h1, h2, h3, h4, h5, h6 {
 	text-transform: none !important;
 	font-family: 'Quicksand', sans-serif !important;
-	color: inherit; /* Match block or general text color */
 }
 
 /* Default text styles for all content in blocks */
 .learn, .notes, .task {
-	font-size: 16px;
+	font-size: 16px  !important;
 	font-family: 'Quicksand', sans-serif !important; /* Default font */
-	color: #646464; /* Default text color */
-	line-height: 1.6; /* Ensure readability */
+	color: #646464  !important; /* Default text color */
+	line-height: 1.6  !important; /* Ensure readability */
 }
 
 /* List styling within blocks */
 .learn ul, .learn ol, .notes ul, .notes ol, .task ul, .task ol {
-	color: #646464; /* Match default text color */
-	font-size: 16px; /* Consistent font size */
+	color: #646464  !important; /* Match default text color */
+	font-size: 16px  !important; /* Consistent font size */
 	font-family: 'Quicksand', sans-serif !important;
 	line-height: 1.6;
-	margin: 10px 0 20px 40px; /* Proper indentation */
-	list-style: disc; /* Standard bullet style */
+	margin: 10px 0 20px 40px  !important; /* Proper indentation */
+	list-style: disc  !important; /* Standard bullet style */
 	padding-left: 0; /* Reset default padding */
 }
 
 .learn li, .notes li, .task li {
-	margin-bottom: 10px; /* Spacing between list items */
+	margin-bottom: 10px  !important; /* Spacing between list items */
 }
 
-/* Ensure proper paragraph styling within blocks */
+/* Paragraph styling within blocks */
 .learn p, .notes p, .task p {
 	font-family: 'Quicksand', sans-serif !important; /* Ensure consistent font */
-	color: #646464; /* Consistent text color */
-	line-height: 1.6; /* Consistent line height */
-	margin: 10px 0; /* Spacing between paragraphs */
+	color: #646464  !important; /* Consistent text color */
+	line-height: 1.6  !important; /* Consistent line height */
+	margin: 10px 0  !important; /* Spacing between paragraphs */
 }
 
 /* Collapsible Button */
