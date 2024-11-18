@@ -118,6 +118,7 @@
 /* Add spacing between title and block content */
 .learn > *, .notes > *, .task > * {
 	margin-top: 60px !important; /* Increased vertical spacing between title and content */
+	padding-left: 15px !important;
 }
 
 
