@@ -115,10 +115,9 @@
 	text-transform: none !important; /* Keep Title Case for text */
 }
 
-/* Ensure extra padding between the pseudo-element and the content */
-.learn p, .notes p, .task p {
-	padding: 0 15px; /* Adds padding for the main content within the block */
-	margin-top: 10px; /* Adds space between the content and the title-like pseudo-element */
+/* Add spacing between title and block content */
+.learn > *, .notes > *, .task > * {
+	margin-top: 60px !important; /* Increased vertical spacing between title and content */
 }
 
 
