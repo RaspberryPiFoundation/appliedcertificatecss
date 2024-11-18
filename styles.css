@@ -25,7 +25,7 @@
 /* General block styles for Learn, Notes, and Task blocks */
 .learn, .notes, .task {
 	position: relative;
-	padding-top: 20px; /* Padding for spacing between title and content */
+	padding: 20px 15px; /* Ensure consistent padding around content */
 	border-radius: 8px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
@@ -39,7 +39,7 @@
 	font-weight: 900; /* Use solid icons */
 	font-size: 24px; /* Icon size */
 	position: absolute;
-	top: 10px;
+	top: 15px;
 	left: 15px;
 	color: inherit; /* Match the block's color */
 }
@@ -48,16 +48,16 @@
 .learn::after, .notes::after, .task::after {
 	content: attr(data-title); /* Pull title text dynamically */
 	position: absolute;
-	top: 10px;
-	left: 50px; /* Spaced to the right of the icon */
-	font-size: 20px; /* Title size */
+	top: 15px;
+	left: 60px; /* Spaced to the right of the icon */
+	font-size: 22px; /* Title size */
 	font-weight: 700; /* Bold text */
 	color: inherit; /* Match the block's color */
 }
 
 /* Spacing between title and content */
 .learn > *, .notes > *, .task > * {
-	margin-top: 20px; /* Add vertical spacing between title and content */
+	margin-top: 40px; /* Add vertical spacing between title and content */
 }
 
 /* Specific block styles */
