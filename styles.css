@@ -22,27 +22,18 @@
 	text-transform: none !important; /* Remove forced uppercase */
 }
 
-/* General Paragraph Text */
-.rpf-text {
-	font-size: 16px;
-	font-family: 'Quicksand', sans-serif !important;
-	color: #222222;
-	line-height: 1.6;
-	margin-bottom: 20px;
-	box-sizing: border-box;
-}
-
-/* General block titles (icon and text alignment) */
+/* General block styles for Learn, Notes, and Task blocks */
 .learn, .notes, .task {
 	position: relative;
-	padding-top: 20px; /* Padding for spacing */
+	padding-top: 20px; /* Padding for spacing between title and content */
 	border-radius: 8px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
 	font-family: 'Quicksand', sans-serif !important; /* Consistent font */
+	padding: 0 15px; /* Horizontal padding for block content */
 }
 
-/* Icon and text alignment */
+/* Icon styles (Font Awesome) */
 .learn::before, .notes::before, .task::before {
 	font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
 	font-weight: 900; /* Use solid icons */
@@ -53,9 +44,9 @@
 	color: inherit; /* Match the block's color */
 }
 
-/* Add title text next to the icon */
+/* Title text styles */
 .learn::after, .notes::after, .task::after {
-	content: attr(data-title); /* Pull text dynamically */
+	content: attr(data-title); /* Pull title text dynamically */
 	position: absolute;
 	top: 10px;
 	left: 50px; /* Spaced to the right of the icon */
@@ -64,11 +55,16 @@
 	color: inherit; /* Match the block's color */
 }
 
-/* Block-specific styles */
+/* Spacing between title and content */
+.learn > *, .notes > *, .task > * {
+	margin-top: 20px; /* Add vertical spacing between title and content */
+}
+
+/* Specific block styles */
 .learn {
 	background-color: #FCF3F6;
 	border: 2px solid #CD2355;
-	color: #CD2355; /* Match title text and icon to the block */
+	color: #CD2355; /* Title text and icon color */
 }
 
 .learn::before {
@@ -99,22 +95,39 @@
 .notes h2, .task h2, .learn h2 {
 	color: inherit;
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 24px !important;
-	font-weight: 700 !important;
-	box-sizing: border-box;
+	font-size: 24px;
+	font-weight: 700;
 	margin-bottom: 15px;
-	text-transform: none !important; /* Remove forced uppercase */
+	text-transform: none; /* Ensure Title Case */
 }
 
-/* Ensure global Title Case for all headings */
+/* Global heading styles to remove uppercase enforcement */
 h1, h2, h3, h4, h5, h6 {
-	text-transform: none !important; /* Remove forced uppercase */
+	text-transform: none !important;
+	font-family: 'Quicksand', sans-serif !important;
 }
 
-/* Ensure extra padding between the pseudo-element and the content */
+/* List styling within blocks */
+.learn ul, .learn ol, .notes ul, .notes ol, .task ul, .task ol {
+	color: #222222; /* Match text color */
+	font-size: 16px; /* Consistent font size */
+	font-family: 'Quicksand', sans-serif !important;
+	line-height: 1.6;
+	margin: 10px 0 20px 40px; /* Proper indentation */
+	padding-left: 0; /* Reset default padding */
+	list-style: disc; /* Standard bullet style */
+}
+
+.learn li, .notes li, .task li {
+	margin-bottom: 10px; /* Spacing between list items */
+}
+
+/* Ensure proper paragraph styling within blocks */
 .learn p, .notes p, .task p {
-	padding: 0 15px; /* Adds padding for the main content within the block */
-	margin-top: 10px; /* Adds space between the content and the title-like pseudo-element */
+	font-family: 'Quicksand', sans-serif !important; /* Ensure consistent font */
+	color: #222222; /* Consistent text color */
+	line-height: 1.6; /* Consistent line height */
+	margin: 10px 0; /* Spacing between paragraphs */
 }
 
 
