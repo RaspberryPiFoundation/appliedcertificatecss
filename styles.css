@@ -118,93 +118,47 @@
     border: 2px solid #CD2355;
 }
 
-/* Style for h2 within the Learn block */
-.learn h2 {
-    color: #CD2355 !important;
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 24px !important;
-    font-weight: 700 !important;
-    box-sizing: border-box;
-    margin-left: 20px; /* Add left margin */
-    margin-right: 0;
-    margin-top: 0; /* Optional: Ensure consistent spacing above */
-    margin-bottom: 15px; /* Consistent spacing below */
-    padding-left: 0; /* Avoid additional padding */
-}
-
-/* Style for h2 within the Notes block */
+/* Style for h2 within the blocks */
 .notes h2 {
-    color: #317C35 !important;
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 24px !important;
-    font-weight: 700 !important;
-    box-sizing: border-box;
-    margin-left: 20px;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 15px;
-    padding-left: 0;
+	color: #317C35 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
 }
 
-/* Style for h2 within the Task block */
 .task h2 {
-    color: #6B3687 !important;
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 24px !important;
-    font-weight: 700 !important;
-    box-sizing: border-box;
-    margin-left: 20px;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 15px;
-    padding-left: 0;
+	color: #6B3687 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
 }
 
-/* Style for h3 within the Learn block */
-.learn h3 {
-    color: #222222 !important;
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 20px !important;
-    font-weight: 700 !important;
-    box-sizing: border-box;
-    margin-left: 20px; /* Add consistent left margin */
-    margin-right: 0;
-    margin-top: 0; /* Optional: Consistent spacing above */
-    margin-bottom: 15px; /* Keep consistent spacing below */
-    padding-left: 0;
+.learn h2 {
+	color: #CD2355 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
 }
 
-/* Style for h3 within the Notes block */
-.notes h3 {
-    color: #222222 !important;
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 20px !important;
-    font-weight: 700 !important;
-    box-sizing: border-box;
-    margin-left: 20px;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 15px;
-    padding-left: 0;
-}
-
-/* Style for h3 within the Task block */
-.task h3 {
-    color: #222222 !important;
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 20px !important;
-    font-weight: 700 !important;
-    box-sizing: border-box;
-    margin-left: 20px;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 15px;
-    padding-left: 0;
+/* Style for h3 within the blocks */
+.notes h3, .task h3, .learn h3 {
+	color: #222222 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 20px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
 }
 
 /* Ensure consistent spacing for paragraphs within blocks */
 .learn p, .notes p, .task p {
-    padding: 0 15px; /* Adds consistent horizontal padding */
+    padding: 0 20px; /* Adds consistent horizontal padding */
     font-size: 16px; /* Same font size as body text */
     font-family: 'Quicksand', sans-serif;
     color: #222222; /* Standard text color */
