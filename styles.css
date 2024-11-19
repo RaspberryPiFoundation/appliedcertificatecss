@@ -97,7 +97,7 @@
 
 /* Style for headings within the blocks */
 .notes h2, .task h2, .learn h2 {
-	color: inherit !important;
+	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 20px !important;
 	font-weight: 900 !important;
@@ -109,7 +109,7 @@
 
 /* Style for headings within the blocks */
 .notes h3, .task h3, .learn h3 {
-	color: inherit !important;
+	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 18px !important;
 	font-weight: 700 !important;
@@ -121,7 +121,7 @@
 
 /* Add spacing between title and block content */
 .learn > *, .notes > *, .task > * {
-	margin-top: 20px !important; /* Increased vertical spacing between title and content */
+	margin-top: 40px !important; /* Increased vertical spacing between title and content */
 	padding-left: 20px !important;
 }
 
