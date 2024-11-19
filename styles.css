@@ -55,12 +55,11 @@ rpf-text {
 .learn::after, .notes::after, .task::after {
 	content: attr(data-title); /* Pull text dynamically */
 	position: absolute;
-	top: 10px;
-	left: 50px; /* Spaced to the right of the icon */
+	top: 20px;
+	left: 60px; /* Spaced to the right of the icon */
 	font-size: 20px; /* Title size */
 	font-weight: 700; /* Bold text */
 	color: inherit; /* Match the block's color */
-	margin-bottom: 40px !important;
 }
 
 /* Block-specific styles */
@@ -96,7 +95,7 @@ rpf-text {
 
 /* Style for headings within the blocks */
 .notes h2, .task h2, .learn h2 {
-	color: #222222 !important;
+	color: inherit !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 20px !important;
 	font-weight: 900 !important;
@@ -118,15 +117,9 @@ rpf-text {
 	letter-spacing: 0.5px !important;
 }
 
-/* Add spacing only after the title and icon in the block */
-.learn > :first-child, .notes > :first-child, .task > :first-child {
-    margin-bottom: 40px; /* Spacing below the icon and title */
-    padding-left: 20px; /* Retain padding for alignment */
-}
-
 /* Remove general spacing rule for all child elements */
-.learn > *, .notes > *, .task > * {
-    margin-top: 0 !important; /* Reset unnecessary top margin */
+.learn-content, .notes-content, .task-content {
+    margin-top: 40 !important; /* Reset unnecessary top margin */
     padding-left: 20px !important; /* Retain consistent left padding */
 }
 
