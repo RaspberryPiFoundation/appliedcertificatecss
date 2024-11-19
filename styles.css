@@ -53,16 +53,19 @@
 .learn::before {
 	content: "\f02d  Learn"; /* Book icon */
 	color: #CD2355;
+	margin-bottom: 40px;
 }
 
 .notes::before {
 	content: "\f27a  Notes"; /* Comment icon */
 	color: #317C35;
+	margin-bottom: 40px;
 }
 
 .task::before {
 	content: "\f14a  Task"; /* Tick box icon */
 	color: #6B3687;
+	margin-bottom: 40px;
 }
 
 /* Style adjustments for each block */
@@ -91,7 +94,33 @@
 
 /* Style for headings within the blocks */
 .notes h2, .task h2, .learn h2 {
-	color: inherit;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+.notes h2 {
+	color: #317C35;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+.task h2 {
+	color: #6B3687;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+.learn h2 {
+	color: #CD2355;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 24px !important;
 	font-weight: 700 !important;
@@ -101,8 +130,13 @@
 
 /* Ensure extra padding between the pseudo-element and the content */
 .learn p, .notes p, .task p {
-	padding: 0 15px; /* Adds padding for the main content within the block */
-	margin-top: 10px; /* Adds space between the content and the title-like pseudo-element */
+	padding: 20 20px; /* Adds padding for the main content within the block */
+	font-size: 16px;
+	font-family: 'Quicksand', sans-serif !important;
+	color: #222222;
+	line-height: 1.6;
+	margin-bottom: 20px;
+	box-sizing: border-box;
 }
 
 
