@@ -121,11 +121,10 @@
 	padding-left: 20px; /* Retain consistent left padding */
 }
 
-/* Remove general spacing rule for all child elements */
+/* Content inside blocks */
 .learn-content, .notes-content, .task-content {
-	margin-top: 40 !important; /* Reset unnecessary top margin */
-	padding-left: 20px !important; /* Retain consistent left padding */
-	padding-right: 20px !important; /* Retain consistent left padding */
+	padding: 0 20px; /* Add consistent padding for all content */
+	margin-top: 40px; /* Space between title/icon and content */
 }
 
 /* Collapsible Button */
