@@ -24,7 +24,7 @@
 .rpf-text {
 	font-size: 16px;
 	font-family: 'Quicksand', sans-serif !important;
-	color: #222222;
+	color: #222222 !important;
 	line-height: 1.6;
 	margin-bottom: 10px;
 	box-sizing: border-box;
@@ -46,10 +46,9 @@
 	font-weight: 900; /* Use solid icons */
 	font-size: 24px; /* Icon size */
 	position: absolute;
-	top: 10px;
-	left: 15px;
+	top: 20px !important;
+	left: 20px !important;
 	color: inherit; /* Match the block's color */
-	margin-bottom: 40px !important;
 }
 
 /* Add title text next to the icon */
@@ -119,6 +118,7 @@
 
 /* Add spacing between title and block content */
 .learn > *, .notes > *, .task > * {
+	margin-top: 40px !important; /* Increased vertical spacing between title and content */
 	padding-left: 20px !important;
 }
 
@@ -303,15 +303,15 @@ a:hover, a:active {
 /* Specific adjustments for lists to ensure alignment with other text */
 ul, ol {
 	color: #222222 !important; /* Match body text color */
-	font-size: 16px; /* Same font size as body text */
+	font-size: 16px !important; /* Same font size as body text */
 	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
 	line-height: 1.6 !important; /* Match line-height for readability */
-	padding-left: 20px !important; /* Indent the list items */
+	padding-left: 50px !important; /* Indent the list items */
 	margin-bottom: 20px !important; /* Add spacing after the list */
-	list-style: disc; /* Add default bullet points */
+	list-style: disc !important; /* Add default bullet points */
 }
 
 /* General list item styling */
 ul li, ol li {
-	margin-bottom: 10px; /* Add spacing between list items */
+	margin-bottom: 10px !important; /* Add spacing between list items */
 }
