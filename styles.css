@@ -97,28 +97,28 @@
 
 /* Style for headings within the blocks */
 .notes h2, .task h2, .learn h2 {
-	color: inherit;
+	color: inherit !important;
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 20px;
-	font-weight: 900;
+	font-size: 20px !important;
+	font-weight: 900 !important;
 	box-sizing: border-box;
 	margin-top: 0; /* No extra space above */
 	text-transform: none !important; /* Keep Title Case for text */
 	letter-spacing: 0.5px !important;
-	padding-left: 20px; /* Retain consistent left padding */
+	padding-left: 20px !important; /* Retain consistent left padding */
 }
 
 /* Style for headings within the blocks */
 .notes h3, .task h3, .learn h3 {
 	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 18px;
-	font-weight: 600;
+	font-size: 18px !important;
+	font-weight: 600 !important;
 	box-sizing: border-box;
 	margin-top: 0; /* No extra space above */
 	text-transform: none !important; /* Keep Title Case for text */
 	letter-spacing: 0.5px !important;
-	padding-left: 20px; /* Retain consistent left padding */
+	padding-left: 20px !important; /* Retain consistent left padding */
 }
 
 /* Content inside blocks */
