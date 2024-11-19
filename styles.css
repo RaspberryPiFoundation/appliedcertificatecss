@@ -32,47 +32,36 @@
 
 /* General styling for block titles using data-title */
 .learn::before, .notes::before, .task::before {
-    content: ''; /* Placeholder to allow alignment */
-    display: inline-block; /* Allows proper alignment with the text */
-    vertical-align: middle; /* Aligns icon and text */
-    font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icon */
-    font-weight: 900; /* Bold font for the icon */
+    content: ''; /* Placeholder for the icon */
+    display: inline-block; /* Align icon inline */
+    font-family: "Font Awesome 6 Free"; /* Font Awesome for the icon */
+    font-weight: 900; /* Bold weight for solid icons */
     font-size: 24px; /* Icon size */
     margin-right: 8px; /* Space between icon and title text */
+    vertical-align: middle; /* Align icon vertically */
 }
 
 .learn::after, .notes::after, .task::after {
-    content: attr(data-title); /* Title text from the data-title attribute */
-    display: inline-block; /* Keeps text aligned with the icon */
-    vertical-align: middle; /* Aligns text with the icon */
-    font-family: 'Quicksand', sans-serif; /* Title font */
+    content: attr(data-title); /* Use the data-title attribute for the text */
+    font-family: 'Quicksand', sans-serif; /* Apply the title font */
     font-size: 24px; /* Title font size */
     font-weight: 900; /* Bold title text */
+    color: inherit; /* Use the parent color */
+    vertical-align: middle; /* Align text vertically with the icon */
 }
 
-/* Ensure block title is at the top of the block */
+/* Title container styling */
 .learn, .notes, .task {
-    display: flex; /* Create a row for alignment */
-    align-items: center; /* Align icon and title vertically */
-    padding: 15px; /* Padding around the title */
-    margin-bottom: 20px; /* Space between title and block content */
-    border-radius: 8px; /* Rounded corners for the block */
-    box-sizing: border-box; /* Include padding in dimensions */
+    position: relative;
+    padding-top: 15px; /* Space for the title */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the block */
+    box-sizing: border-box; /* Include padding in block dimensions */
 }
 
-/* Specific colors and icons for each block */
 .learn {
     background-color: #FCF3F6;
     border: 2px solid #CD2355;
-}
-
-.learn::before {
-    content: "\f02d"; /* Font Awesome book icon */
-    color: #CD2355; /* Icon color for Learn block */
-}
-
-.learn::after {
-    color: #CD2355; /* Text color for Learn block */
 }
 
 .notes {
@@ -80,18 +69,24 @@
     border: 2px solid #317C35;
 }
 
-.notes::before {
-    content: "\f27a"; /* Font Awesome comment icon */
-    color: #317C35; /* Icon color for Notes block */
-}
-
-.notes::after {
-    color: #317C35; /* Text color for Notes block */
-}
-
 .task {
     background-color: #F4EEF7;
     border: 2px solid #6B3687;
+}
+
+/* Title container: icon + text */
+.learn::before, .notes::before, .task::before {
+    color: inherit; /* Use block-specific colors */
+}
+
+.learn::before {
+    content: "\f02d"; /* Font Awesome book icon */
+    color: #CD2355; /* Icon color for Learn block */
+}
+
+.notes::before {
+    content: "\f27a"; /* Font Awesome comment icon */
+    color: #317C35; /* Icon color for Notes block */
 }
 
 .task::before {
@@ -99,18 +94,14 @@
     color: #6B3687; /* Icon color for Task block */
 }
 
-.task::after {
-    color: #6B3687; /* Text color for Task block */
-}
-
-/* Ensure content inside the block is spaced consistently */
+/* Ensure consistent spacing for content within blocks */
 .learn p, .notes p, .task p {
-    padding: 0 15px; /* Horizontal padding for paragraphs */
-    margin-top: 15px; /* Space above paragraphs */
-    font-size: 16px; /* Paragraph font size */
+    padding: 0 15px; /* Horizontal padding */
+    font-size: 16px; /* Font size for body text */
     font-family: 'Quicksand', sans-serif;
-    color: #222222; /* Standard text color */
+    color: #222222; /* Text color */
     line-height: 1.6;
+    margin-bottom: 20px; /* Spacing below paragraphs */
 }
 
 /* Style for h2 within the blocks */
