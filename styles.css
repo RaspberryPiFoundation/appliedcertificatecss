@@ -44,6 +44,21 @@
 	box-sizing: border-box;
 }
 
+.notes {
+	background-color: #EDF7EE;
+	border: 2px solid #317C35;
+}
+
+.task {
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
+}
+
+.learn {
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
+}
+
 /* Consistent padding for all content within the blocks */
 /*.learn > *, .notes > *, .task > * { */
 /*	padding: 0 15px; /* Apply horizontal padding */ */
