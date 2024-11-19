@@ -41,11 +41,12 @@
 }
 
 .learn::before {
-    content: "\f02d"; /* Font Awesome book icon */
-    font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icon */
-    font-weight: 900; /* Font weight required for solid icons */
-    color: #CD2355; /* Icon color for Learn block */
-    margin-right: 8px; /* Space between icon and title text */
+	content: "\f02d"; /* Font Awesome book icon */
+	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icon */
+	font-weight: 900; /* Font weight required for solid icons */
+	color: #CD2355; /* Icon color for Learn block */
+	margin-right: 8px; /* Space between icon and title text */
+	margin-left: 20px
 }
 
 .learn::after {
@@ -64,6 +65,7 @@
     font-weight: 900;
     color: #317C35; /* Icon color for Notes block */
     margin-right: 8px;
+	margin-left: 20px
 }
 
 .notes::after {
@@ -82,6 +84,7 @@
     font-weight: 900;
     color: #6B3687; /* Icon color for Task block */
     margin-right: 8px;
+	margin-left: 20px
 }
 
 .task::after {
@@ -129,7 +132,6 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
-	padding-left: 0; /* Avoid additional padding */
 }
 
 .task h2 {
@@ -142,7 +144,6 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
-	padding-left: 0; /* Avoid additional padding */
 }
 
 .learn h2 {
@@ -155,7 +156,6 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
-	padding-left: 0; /* Avoid additional padding */
 }
 
 /* Style for h3 within the blocks */
@@ -169,7 +169,6 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
-	padding-left: 0; /* Avoid additional padding */
 }
 
 /* Ensure consistent spacing for paragraphs within blocks */
