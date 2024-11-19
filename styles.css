@@ -125,7 +125,11 @@
 	font-size: 24px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Add left margin */
+	margin-right: 0;
+	margin-top: 0; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px; /* Consistent spacing below */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 .task h2 {
@@ -134,7 +138,11 @@
 	font-size: 24px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Add left margin */
+	margin-right: 0;
+	margin-top: 0; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px; /* Consistent spacing below */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 .learn h2 {
@@ -143,7 +151,11 @@
 	font-size: 24px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Add left margin */
+	margin-right: 0;
+	margin-top: 0; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px; /* Consistent spacing below */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 /* Style for h3 within the blocks */
@@ -153,7 +165,11 @@
 	font-size: 20px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Add left margin */
+	margin-right: 0;
+	margin-top: 0; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px; /* Consistent spacing below */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 /* Ensure consistent spacing for paragraphs within blocks */
