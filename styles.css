@@ -21,8 +21,8 @@
 }
 
 /* General Paragraph Text */
-.rpf-text {
-	font-size: 16px;
+.learn p, .notes p, .task p {
+	font-size: 16px !important;
 	font-family: 'Quicksand', sans-serif !important;
 	color: #222222 !important;
 	line-height: 1.6;
@@ -110,18 +110,23 @@
 	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 18px !important;
-	font-weight: 400 !important;
+	font-weight: 600 !important;
 	box-sizing: border-box;
 	margin-top: 0 !important; /* No extra space above */
 	text-transform: none !important; /* Keep Title Case for text */
 }
 
-/* Add spacing between title and block content */
-.learn > *, .notes > *, .task > * {
-	margin-top: 40px !important; /* Increased vertical spacing between title and content */
-	padding-left: 20px !important;
+/* Add spacing only after the title and icon in the block */
+.learn > :first-child, .notes > :first-child, .task > :first-child {
+    margin-bottom: 40px; /* Spacing below the icon and title */
+    padding-left: 20px; /* Retain padding for alignment */
 }
 
+/* Remove general spacing rule for all child elements */
+.learn > *, .notes > *, .task > * {
+    margin-top: 0 !important; /* Reset unnecessary top margin */
+    padding-left: 20px !important; /* Retain consistent left padding */
+}
 
 /* Collapsible Button */
 details summary {
@@ -302,6 +307,17 @@ a:hover, a:active {
 
 /* Specific adjustments for lists to ensure alignment with other text */
 ul, ol {
+	color: #222222 !important; /* Match body text color */
+	font-size: 16px !important; /* Same font size as body text */
+	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
+	line-height: 1.6 !important; /* Match line-height for readability */
+	padding-left: 50px !important; /* Indent the list items */
+	margin-bottom: 20px !important; /* Add spacing after the list */
+	list-style: disc !important; /* Add default bullet points */
+}
+
+/* Specific adjustments for lists to ensure alignment with other text */
+.notes ul, .task ul, .learn ul, .notes ol, .task ol, .learn ol {
 	color: #222222 !important; /* Match body text color */
 	font-size: 16px !important; /* Same font size as body text */
 	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
