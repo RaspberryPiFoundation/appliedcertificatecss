@@ -21,7 +21,7 @@
 }
 
 /* General Paragraph Text */
-.learn p, .notes p, .task p {
+rpf-text {
 	font-size: 16px !important;
 	font-family: 'Quicksand', sans-serif !important;
 	color: #222222 !important;
@@ -103,6 +103,7 @@
 	box-sizing: border-box;
 	margin-top: 0 !important; /* No extra space above */
 	text-transform: none !important; /* Keep Title Case for text */
+	letter-spacing: 0.5px !important;
 }
 
 /* Style for headings within the blocks */
@@ -114,6 +115,7 @@
 	box-sizing: border-box;
 	margin-top: 0 !important; /* No extra space above */
 	text-transform: none !important; /* Keep Title Case for text */
+	letter-spacing: 0.5px !important;
 }
 
 /* Add spacing only after the title and icon in the block */
