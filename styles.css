@@ -30,63 +30,64 @@
 	box-sizing: border-box;
 }
 
-/* Updated pseudo-element for the block title (top-left as a header, left-aligned) */
+/* General styling for block titles using data-title */
 .learn::before, .notes::before, .task::before {
-	display: block;
-	font-size: 18px;
-	font-weight: 900;
-	padding: 10px 15px;
-	margin-bottom: 10px;
+	content: attr(data-title); /* Uses the data-title attribute for the text */
+	display: flex; /* Ensures the icon and text align horizontally */
+	align-items: center; /* Vertically aligns the icon and text */
+	font-family: 'Quicksand', sans-serif; /* Applies Quicksand font */
+	font-size: 24px; /* Sets the font size */
+	font-weight: 900; /* Sets the font to bold */
+	color: inherit; /* Uses the block's specific color */
+	padding: 0 15px; /* Adds padding for spacing */
+	margin-bottom: 15px; /* Ensures proper spacing below the title */
 	box-sizing: border-box;
-	font-family: "Font Awesome 6 Free";
-	text-align: left; /* Ensures the text is left-aligned */
 }
 
 /* Consistent padding for all content within the blocks */
-.learn > *, .notes > *, .task > * {
-    padding: 0 15px; /* Apply horizontal padding */
-    margin-top: 10px; /* Add vertical spacing between elements */
-    box-sizing: border-box;
-}
+/*.learn > *, .notes > *, .task > * { */
+/*	padding: 0 15px; /* Apply horizontal padding */ */
+/*	margin-top: 10px; /* Add vertical spacing between elements */ */
+/*	box-sizing: border-box; */
+/*} */
 
-/* Adjust each block title with specific text, icon, and color */
+/* Specific icons for each block type */
 .learn::before {
-	content: "\f02d  Learn"; /* Book icon */
-	color: #CD2355;
+	content: "\f02d  " attr(data-title); /* Font Awesome book icon + title */
+	color: #CD2355; /* Icon and text color */
+	font-family: "Font Awesome 6 Free", 'Quicksand', sans-serif; /* Use Font Awesome and Quicksand */
 }
 
 .notes::before {
-	content: "\f27a  Notes"; /* Comment icon */
+	content: "\f27a  " attr(data-title); /* Font Awesome comment icon + title */
 	color: #317C35;
+	font-family: "Font Awesome 6 Free", 'Quicksand', sans-serif;
 }
 
 .task::before {
-	content: "\f14a  Task"; /* Tick box icon */
+	content: "\f14a  " attr(data-title); /* Font Awesome tick icon + title */
 	color: #6B3687;
+	font-family: "Font Awesome 6 Free", 'Quicksand', sans-serif;
 }
 
-/* Style adjustments for each block */
+/* Block-specific styling */
 .notes, .task, .learn {
 	position: relative;
-	padding-top: 20px; /* Add padding to make space for the "title" at the top */
+	padding-top: 20px; /* Creates space for the title */
 	border-radius: 8px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
 }
 
-.notes {
-	background-color: #EDF7EE;
-	border: 2px solid #317C35;
-}
-
-.task {
-	background-color: #F4EEF7;
-	border: 2px solid #6B3687;
-}
-
-.learn {
-	background-color: #FCF3F6;
-	border: 2px solid #CD2355;
+/* Ensure consistent spacing for paragraphs within blocks */
+.learn p, .notes p, .task p {
+	padding: 0 15px; /* Adds consistent padding */
+	font-size: 16px; /* Same as body text */
+	font-family: 'Quicksand', sans-serif;
+	color: #222222;
+	line-height: 1.6;
+	margin-bottom: 20px; /* Spacing below paragraphs */
+	box-sizing: border-box;
 }
 
 /* Style for h2 within the blocks */
@@ -127,14 +128,14 @@
 	margin-bottom: 15px;
 }
 
-/* Ensure extra padding between the pseudo-element and the content */
+/* Ensure consistent spacing for paragraphs within blocks */
 .learn p, .notes p, .task p {
-	padding: 20 20px; /* Adds padding for the main content within the block */
-	font-size: 16px;
-	font-family: 'Quicksand', sans-serif !important;
+	padding: 0 15px; /* Adds consistent padding */
+	font-size: 16px; /* Same as body text */
+	font-family: 'Quicksand', sans-serif;
 	color: #222222;
 	line-height: 1.6;
-	margin-bottom: 20px;
+	margin-bottom: 20px; /* Spacing below paragraphs */
 	box-sizing: border-box;
 }
 
@@ -192,7 +193,7 @@ details .content {
 
 /* Specific adjustment for portrait documents */
 .content.portrait iframe {
-    height: calc(100vw * 16 / 9);  /* Inverts aspect ratio for portrait documents */
+	height: calc(100vw * 16 / 9);  /* Inverts aspect ratio for portrait documents */
 }
 
 /* General Video Block Container */
@@ -264,28 +265,28 @@ details .content {
 
 /* Style for the image container */
 .image-container {
-    text-align: center; /* Centers the image and the caption */
-    margin-bottom: 20px; /* Adds space below the image */
+	text-align: center; /* Centers the image and the caption */
+	margin-bottom: 20px; /* Adds space below the image */
 }
 
 /* Style for the image */
 .images {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 5px; /* Small padding below the image */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	height: auto;
+	padding-bottom: 5px; /* Small padding below the image */
 }
 
 /* Style for the image caption */
 .image-caption {
-    font-size: 12px; /* Makes the caption smaller */
-    font-family: 'Quicksand', sans-serif !important;
-    color: #777; /* Muted text color */
-    text-align: center;
-    margin-top: 5px; /* Small margin between the image and caption */
-    padding: 0; /* Minimal padding */
+	font-size: 12px; /* Makes the caption smaller */
+	font-family: 'Quicksand', sans-serif !important;
+	color: #777; /* Muted text color */
+	text-align: center;
+	margin-top: 5px; /* Small margin between the image and caption */
+	padding: 0; /* Minimal padding */
 }
 
 /* Custom Link Styling */
