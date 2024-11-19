@@ -32,76 +32,70 @@
 
 /* General styling for block titles using data-title */
 .learn::before, .notes::before, .task::before {
-    content: ''; /* Placeholder for the icon */
-    display: inline-block; /* Align icon inline */
-    font-family: "Font Awesome 6 Free"; /* Font Awesome for the icon */
-    font-weight: 900; /* Bold weight for solid icons */
-    font-size: 24px; /* Icon size */
-    margin-right: 8px; /* Space between icon and title text */
-    vertical-align: middle; /* Align icon vertically */
-}
-
-.learn::after, .notes::after, .task::after {
-    content: attr(data-title); /* Use the data-title attribute for the text */
-    font-family: 'Quicksand', sans-serif; /* Apply the title font */
-    font-size: 24px; /* Title font size */
-    font-weight: 900; /* Bold title text */
-    color: inherit; /* Use the parent color */
-    vertical-align: middle; /* Align text vertically with the icon */
-}
-
-/* Title container styling */
-.learn, .notes, .task {
-    position: relative;
-    padding-top: 15px; /* Space for the title */
-    border-radius: 8px; /* Rounded corners */
-    margin-bottom: 20px; /* Space below the block */
-    box-sizing: border-box; /* Include padding in block dimensions */
-}
-
-.learn {
-    background-color: #FCF3F6;
-    border: 2px solid #CD2355;
+	content: attr(data-title); /* Uses the data-title attribute for the text */
+	display: flex; /* Ensures the icon and text align horizontally */
+	align-items: center; /* Vertically aligns the icon and text */
+	font-family: 'Quicksand', sans-serif; /* Applies Quicksand font */
+	font-size: 24px; /* Sets the font size */
+	font-weight: 900; /* Sets the font to bold */
+	color: inherit; /* Uses the block's specific color */
+	padding: 0 15px; /* Adds padding for spacing */
+	margin-bottom: 15px; /* Ensures proper spacing below the title */
+	box-sizing: border-box;
 }
 
 .notes {
-    background-color: #EDF7EE;
-    border: 2px solid #317C35;
+	background-color: #EDF7EE;
+	border: 2px solid #317C35;
 }
 
 .task {
-    background-color: #F4EEF7;
-    border: 2px solid #6B3687;
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
 }
 
-/* Title container: icon + text */
-.learn::before, .notes::before, .task::before {
-    color: inherit; /* Use block-specific colors */
+.learn {
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
 }
 
+/* Specific icons for each block type */
 .learn::before {
-    content: "\f02d"; /* Font Awesome book icon */
-    color: #CD2355; /* Icon color for Learn block */
+	content: "\f02d  " attr(data-title); /* Font Awesome book icon + title */
+	color: #CD2355; /* Icon and text color */
+	font-family: "Font Awesome 6 Free", 'Quicksand', sans-serif; /* Use Font Awesome and Quicksand */
 }
 
 .notes::before {
-    content: "\f27a"; /* Font Awesome comment icon */
-    color: #317C35; /* Icon color for Notes block */
+	content: "\f27a  " attr(data-title); /* Font Awesome comment icon + title */
+	color: #317C35;
+	font-family: "Font Awesome 6 Free", 'Quicksand', sans-serif;
 }
 
 .task::before {
-    content: "\f14a"; /* Font Awesome tick icon */
-    color: #6B3687; /* Icon color for Task block */
+	content: "\f14a  " attr(data-title); /* Font Awesome tick icon + title */
+	color: #6B3687;
+	font-family: "Font Awesome 6 Free", 'Quicksand', sans-serif;
 }
 
-/* Ensure consistent spacing for content within blocks */
+/* Block-specific styling */
+.notes, .task, .learn {
+	position: relative;
+	padding-top: 20px; /* Creates space for the title */
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+/* Ensure consistent spacing for paragraphs within blocks */
 .learn p, .notes p, .task p {
-    padding: 0 15px; /* Horizontal padding */
-    font-size: 16px; /* Font size for body text */
-    font-family: 'Quicksand', sans-serif;
-    color: #222222; /* Text color */
-    line-height: 1.6;
-    margin-bottom: 20px; /* Spacing below paragraphs */
+	padding: 0 15px; /* Adds consistent padding */
+	font-size: 16px; /* Same as body text */
+	font-family: 'Quicksand', sans-serif;
+	color: #222222;
+	line-height: 1.6;
+	margin-bottom: 20px; /* Spacing below paragraphs */
+	box-sizing: border-box;
 }
 
 /* Style for h2 within the blocks */
@@ -111,7 +105,11 @@
 	font-size: 24px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Restore the 20px left margin */
+	margin-right: 0; /* Reset any unintended margin on the right */
+	margin-top: 0; /* Optional: Ensure consistent spacing */
+	margin-bottom: 15px; /* Keep space below the header */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 .task h2 {
@@ -120,7 +118,11 @@
 	font-size: 24px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Restore the 20px left margin */
+	margin-right: 0; /* Reset any unintended margin on the right */
+	margin-top: 0; /* Optional: Ensure consistent spacing */
+	margin-bottom: 15px; /* Keep space below the header */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 .learn h2 {
@@ -129,7 +131,11 @@
 	font-size: 24px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Restore the 20px left margin */
+	margin-right: 0; /* Reset any unintended margin on the right */
+	margin-top: 0; /* Optional: Ensure consistent spacing */
+	margin-bottom: 15px; /* Keep space below the header */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 /* Style for h3 within the blocks */
@@ -139,8 +145,24 @@
 	font-size: 20px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Restore the 20px left margin */
+	margin-right: 0; /* Reset any unintended margin on the right */
+	margin-top: 0; /* Optional: Ensure consistent spacing */
+	margin-bottom: 15px; /* Keep space below the header */
+	padding-left: 0; /* Avoid additional padding */
 }
+
+/* Ensure consistent spacing for paragraphs within blocks */
+.learn p, .notes p, .task p {
+	padding: 0 15px; /* Adds consistent padding */
+	font-size: 16px; /* Same as body text */
+	font-family: 'Quicksand', sans-serif;
+	color: #222222;
+	line-height: 1.6;
+	margin-bottom: 20px; /* Spacing below paragraphs */
+	box-sizing: border-box;
+}
+
 
 /* Collapsible Button */
 details summary {
