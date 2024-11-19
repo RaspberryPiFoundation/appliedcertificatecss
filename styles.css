@@ -91,7 +91,7 @@
 
 /* Style for h2 within the blocks */
 .notes h2 {
-	color: #317C35;
+	color: #317C35 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 24px !important;
 	font-weight: 700 !important;
@@ -100,7 +100,7 @@
 }
 
 .task h2 {
-	color: #6B3687;
+	color: #6B3687 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 24px !important;
 	font-weight: 700 !important;
@@ -109,7 +109,7 @@
 }
 
 .learn h2 {
-	color: #CD2355;
+	color: #CD2355 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 24px !important;
 	font-weight: 700 !important;
@@ -119,7 +119,7 @@
 
 /* Style for h3 within the blocks */
 .notes h3, .task h3, .learn h3 {
-	color: #222222;
+	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 20px !important;
 	font-weight: 500 !important;
