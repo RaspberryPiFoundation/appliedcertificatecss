@@ -49,7 +49,7 @@
 	top: 10px;
 	left: 15px;
 	color: inherit; /* Match the block's color */
-	margin-bottom: 20px !important;
+	margin-bottom: 40px !important;
 }
 
 /* Add title text next to the icon */
@@ -61,7 +61,7 @@
 	font-size: 20px; /* Title size */
 	font-weight: 700; /* Bold text */
 	color: inherit; /* Match the block's color */
-	margin-bottom: 20px !important;
+	margin-bottom: 40px !important;
 }
 
 /* Block-specific styles */
@@ -103,7 +103,6 @@
 	font-weight: 900 !important;
 	box-sizing: border-box;
 	margin-top: 0 !important; /* No extra space above */
-	margin-bottom: 10px !important;
 	text-transform: none !important; /* Keep Title Case for text */
 }
 
@@ -112,16 +111,14 @@
 	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 18px !important;
-	font-weight: 700 !important;
+	font-weight: 400 !important;
 	box-sizing: border-box;
 	margin-top: 0 !important; /* No extra space above */
-	margin-bottom: 10px !important;
 	text-transform: none !important; /* Keep Title Case for text */
 }
 
 /* Add spacing between title and block content */
 .learn > *, .notes > *, .task > * {
-	margin-top: 40px !important; /* Increased vertical spacing between title and content */
 	padding-left: 20px !important;
 }
 
