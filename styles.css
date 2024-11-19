@@ -53,19 +53,16 @@
 .learn::before {
 	content: "\f02d  Learn"; /* Book icon */
 	color: #CD2355;
-	margin-bottom: 40px;
 }
 
 .notes::before {
 	content: "\f27a  Notes"; /* Comment icon */
 	color: #317C35;
-	margin-bottom: 40px;
 }
 
 .task::before {
 	content: "\f14a  Task"; /* Tick box icon */
 	color: #6B3687;
-	margin-bottom: 40px;
 }
 
 /* Style adjustments for each block */
