@@ -28,6 +28,7 @@ rpf-text {
 	line-height: 1.6;
 	margin-bottom: 10px;
 	box-sizing: border-box;
+	padding-left: 20px !important; /* Retain consistent left padding */
 }
 
 /* General block titles (icon and text alignment) */
@@ -103,6 +104,7 @@ rpf-text {
 	margin-top: 0 !important; /* No extra space above */
 	text-transform: none !important; /* Keep Title Case for text */
 	letter-spacing: 0.5px !important;
+	padding-left: 20px !important; /* Retain consistent left padding */
 }
 
 /* Style for headings within the blocks */
@@ -115,6 +117,7 @@ rpf-text {
 	margin-top: 0 !important; /* No extra space above */
 	text-transform: none !important; /* Keep Title Case for text */
 	letter-spacing: 0.5px !important;
+	padding-left: 20px !important; /* Retain consistent left padding */
 }
 
 /* Remove general spacing rule for all child elements */
