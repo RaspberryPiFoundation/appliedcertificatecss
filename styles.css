@@ -32,30 +32,30 @@
 
 /* General styling for block titles using data-title */
 .learn::before, .notes::before, .task::before {
-    display: flex; /* Align icon and text horizontally */
-    align-items: center; /* Vertically aligns the icon and text */
-    font-size: 24px; /* Font size for both icon and title */
-    font-weight: 900; /* Bold font for the title */
-    padding: 0 15px; /* Adds horizontal padding */
+    display: inline-flex; /* Align icon and text in a row */
+    align-items: center; /* Vertically align icon and text */
+    font-size: 24px; /* Icon size */
+    font-weight: 900; /* Bold font for the icon */
     margin-bottom: 15px; /* Adds spacing below the title */
     box-sizing: border-box;
 }
 
-/* Specific icons and colors for each block type */
 .learn::before {
     content: "\f02d"; /* Font Awesome book icon */
     font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icon */
     font-weight: 900; /* Font weight required for solid icons */
     color: #CD2355; /* Icon color for Learn block */
-    margin-right: 8px; /* Space between icon and text */
+    margin-right: 8px; /* Space between icon and title text */
 }
 
 .learn::after {
-    content: attr(data-title); /* Title text from data-title attribute */
+    content: attr(data-title); /* Title text */
     font-family: 'Quicksand', sans-serif; /* Title font */
     font-size: 24px; /* Title font size */
     font-weight: 900; /* Bold title text */
     color: #CD2355; /* Title color for Learn block */
+    margin-left: 8px; /* Align spacing with icon */
+    display: inline; /* Ensure text stays aligned with icon */
 }
 
 .notes::before {
@@ -72,6 +72,8 @@
     font-size: 24px;
     font-weight: 900;
     color: #317C35; /* Title color for Notes block */
+    margin-left: 8px;
+    display: inline;
 }
 
 .task::before {
@@ -88,6 +90,8 @@
     font-size: 24px;
     font-weight: 900;
     color: #6B3687; /* Title color for Task block */
+    margin-left: 8px;
+    display: inline;
 }
 
 /* Block-specific styling */
@@ -121,10 +125,10 @@
     font-size: 24px !important;
     font-weight: 700 !important;
     box-sizing: border-box;
-    margin-left: 20px; /* Restore the 20px left margin */
-    margin-right: 0; /* Reset any unintended margin on the right */
-    margin-top: 0; /* Optional: Ensure consistent spacing */
-    margin-bottom: 15px; /* Keep space below the header */
+    margin-left: 20px; /* Add left margin */
+    margin-right: 0;
+    margin-top: 0; /* Optional: Ensure consistent spacing above */
+    margin-bottom: 15px; /* Consistent spacing below */
     padding-left: 0; /* Avoid additional padding */
 }
 
@@ -163,10 +167,10 @@
     font-size: 20px !important;
     font-weight: 700 !important;
     box-sizing: border-box;
-    margin-left: 20px;
+    margin-left: 20px; /* Add consistent left margin */
     margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin-top: 0; /* Optional: Consistent spacing above */
+    margin-bottom: 15px; /* Keep consistent spacing below */
     padding-left: 0;
 }
 
@@ -208,7 +212,6 @@
     margin-bottom: 20px; /* Spacing below paragraphs */
     box-sizing: border-box;
 }
-
 
 /* Collapsible Button */
 details summary {
