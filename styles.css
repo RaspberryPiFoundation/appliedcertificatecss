@@ -22,12 +22,12 @@
 
 /* General Paragraph Text */
 .rpf-text { /* Corrected class selector with '.' */
-	font-size: 16px; /* Adjust font size */
-	font-family: 'Quicksand', sans-serif; /* Apply Quicksand font */
-	color: #222222; /* Default paragraph color */
-	line-height: 1.6;
-	margin-bottom: 10px;
-	padding: 0 20px; /* Add 20px padding to both left and right */
+	font-size: 16px !important; /* Adjust font size */
+	font-family: 'Quicksand', sans-serif !important; /* Apply Quicksand font */
+	color: #222222 !important; /* Default paragraph color */
+	line-height: 1.6 !important;
+	margin-bottom: 10px !important;
+	padding: 0 20px !important; /* Add 20px padding to both left and right */
 	box-sizing: border-box; /* Ensure padding does not affect overall width */
 }
 
