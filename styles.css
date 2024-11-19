@@ -59,13 +59,6 @@
 	border: 2px solid #CD2355;
 }
 
-/* Consistent padding for all content within the blocks */
-/*.learn > *, .notes > *, .task > * { */
-/*	padding: 0 15px; /* Apply horizontal padding */ */
-/*	margin-top: 10px; /* Add vertical spacing between elements */ */
-/*	box-sizing: border-box; */
-/*} */
-
 /* Specific icons for each block type */
 .learn::before {
 	content: "\f02d  " attr(data-title); /* Font Awesome book icon + title */
@@ -112,7 +105,11 @@
 	font-size: 24px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Restore the 20px left margin */
+	margin-right: 0; /* Reset any unintended margin on the right */
+	margin-top: 0; /* Optional: Ensure consistent spacing */
+	margin-bottom: 15px; /* Keep space below the header */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 .task h2 {
@@ -121,7 +118,11 @@
 	font-size: 24px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Restore the 20px left margin */
+	margin-right: 0; /* Reset any unintended margin on the right */
+	margin-top: 0; /* Optional: Ensure consistent spacing */
+	margin-bottom: 15px; /* Keep space below the header */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 .learn h2 {
@@ -130,7 +131,11 @@
 	font-size: 24px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Restore the 20px left margin */
+	margin-right: 0; /* Reset any unintended margin on the right */
+	margin-top: 0; /* Optional: Ensure consistent spacing */
+	margin-bottom: 15px; /* Keep space below the header */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 /* Style for h3 within the blocks */
@@ -140,7 +145,11 @@
 	font-size: 20px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	margin-left: 20px; /* Restore the 20px left margin */
+	margin-right: 0; /* Reset any unintended margin on the right */
+	margin-top: 0; /* Optional: Ensure consistent spacing */
+	margin-bottom: 15px; /* Keep space below the header */
+	padding-left: 0; /* Avoid additional padding */
 }
 
 /* Ensure consistent spacing for paragraphs within blocks */
