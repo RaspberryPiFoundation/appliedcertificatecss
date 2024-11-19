@@ -21,14 +21,14 @@
 }
 
 /* General Paragraph Text */
-rpf-text {
-	font-size: 16px !important;
-	font-family: 'Quicksand', sans-serif !important;
-	color: #222222 !important;
+.rpf-text { /* Corrected class selector with '.' */
+	font-size: 16px; /* Adjust font size */
+	font-family: 'Quicksand', sans-serif; /* Apply Quicksand font */
+	color: #222222; /* Default paragraph color */
 	line-height: 1.6;
 	margin-bottom: 10px;
-	box-sizing: border-box;
-	padding-left: 20px !important; /* Retain consistent left padding */
+	padding: 0 20px; /* Add 20px padding to both left and right */
+	box-sizing: border-box; /* Ensure padding does not affect overall width */
 }
 
 /* General block titles (icon and text alignment) */
@@ -39,6 +39,7 @@ rpf-text {
 	margin-bottom: 10px;
 	box-sizing: border-box;
 	font-family: 'Quicksand', sans-serif !important; /* Consistent font */
+	color: #222222; /* Default text color for content */
 }
 
 /* Icon and text alignment */
@@ -47,8 +48,8 @@ rpf-text {
 	font-weight: 900; /* Use solid icons */
 	font-size: 24px; /* Icon size */
 	position: absolute;
-	top: 20px !important;
-	left: 20px !important;
+	top: 20px;
+	left: 20px;
 	color: inherit; /* Match the block's color */
 }
 
@@ -96,34 +97,35 @@ rpf-text {
 
 /* Style for headings within the blocks */
 .notes h2, .task h2, .learn h2 {
-	color: inherit !important;
+	color: inherit;
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 20px !important;
-	font-weight: 900 !important;
+	font-size: 20px;
+	font-weight: 900;
 	box-sizing: border-box;
-	margin-top: 0 !important; /* No extra space above */
+	margin-top: 0; /* No extra space above */
 	text-transform: none !important; /* Keep Title Case for text */
 	letter-spacing: 0.5px !important;
-	padding-left: 20px !important; /* Retain consistent left padding */
+	padding-left: 20px; /* Retain consistent left padding */
 }
 
 /* Style for headings within the blocks */
 .notes h3, .task h3, .learn h3 {
 	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 18px !important;
-	font-weight: 600 !important;
+	font-size: 18px;
+	font-weight: 600;
 	box-sizing: border-box;
-	margin-top: 0 !important; /* No extra space above */
+	margin-top: 0; /* No extra space above */
 	text-transform: none !important; /* Keep Title Case for text */
 	letter-spacing: 0.5px !important;
-	padding-left: 20px !important; /* Retain consistent left padding */
+	padding-left: 20px; /* Retain consistent left padding */
 }
 
 /* Remove general spacing rule for all child elements */
 .learn-content, .notes-content, .task-content {
-    margin-top: 40 !important; /* Reset unnecessary top margin */
-    padding-left: 20px !important; /* Retain consistent left padding */
+	margin-top: 40 !important; /* Reset unnecessary top margin */
+	padding-left: 20px !important; /* Retain consistent left padding */
+	padding-right: 20px !important; /* Retain consistent left padding */
 }
 
 /* Collapsible Button */
