@@ -50,45 +50,45 @@
 }
 
 .learn::after {
-    content: attr(data-title); /* Title text */
-    font-family: 'Quicksand', sans-serif; /* Title font */
-    font-size: 24px; /* Title font size */
-    font-weight: 900; /* Bold title text */
-    color: #CD2355; /* Title color for Learn block */
-    margin-left: 8px; /* Align spacing with icon */
-    display: inline; /* Ensure text stays aligned with icon */
+	content: attr(data-title); /* Title text */
+	font-family: 'Quicksand', sans-serif; /* Title font */
+	font-size: 24px; /* Title font size */
+	font-weight: 900; /* Bold title text */
+	color: #CD2355; /* Title color for Learn block */
+	margin-left: 8px; /* Align spacing with icon */
+	display: inline; /* Ensure text stays aligned with icon */
 }
 
 .notes::before {
-    content: "\f27a"; /* Font Awesome comment icon */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: #317C35; /* Icon color for Notes block */
+	content: "\f27a"; /* Font Awesome comment icon */
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	color: #317C35; /* Icon color for Notes block */
 }
 
 .notes::after {
-    content: attr(data-title);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    color: #317C35; /* Title color for Notes block */
-    margin-left: 8px;
-    display: inline;
+	content: attr(data-title);
+	font-family: 'Quicksand', sans-serif;
+	font-size: 24px;
+	font-weight: 900;
+	color: #317C35; /* Title color for Notes block */
+	margin-left: 8px;
+	display: inline;
 }
 
 .task::before {
-    content: "\f14a"; /* Font Awesome tick icon */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: #6B3687; /* Icon color for Task block */
+	content: "\f14a"; /* Font Awesome tick icon */
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	color: #6B3687; /* Icon color for Task block */
 }
 
 .task::after {
-    content: attr(data-title);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    color: #6B3687; /* Title color for Task block */
+	content: attr(data-title);
+	font-family: 'Quicksand', sans-serif;
+	font-size: 24px;
+	font-weight: 900;
+	color: #6B3687; /* Title color for Task block */
 }
 
 /* Block-specific styling */
@@ -102,18 +102,18 @@
 }
 
 .notes {
-    background-color: #EDF7EE;
-    border: 2px solid #317C35;
+	background-color: #EDF7EE;
+	border: 2px solid #317C35;
 }
 
 .task {
-    background-color: #F4EEF7;
-    border: 2px solid #6B3687;
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
 }
 
 .learn {
-    background-color: #FCF3F6;
-    border: 2px solid #CD2355;
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
 }
 
 /* Style for h2 within the blocks */
@@ -157,7 +157,6 @@
 }
 
 /* Style for h3 within the blocks */
-
 .notes h3 {
 	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
@@ -227,7 +226,8 @@ details summary {
 }
 
 details[open] summary {
-    background-color: #232E9B;
+	background-color: #232E9B;
+	margin-bottom: 10px !important; /* Reduce margin between button and content */
 }
 
 details summary:hover {
@@ -236,21 +236,21 @@ details summary:hover {
 
 /* Add spacing between the closed button and the next content */
 details:not([open]) {
-    margin-bottom: 20px; /* Adds spacing when content is hidden */
+    margin-bottom: 20px !important; /* Adds spacing when content is hidden */
 }
 
 /* Collapsible Content */
 details .content {
-    background-color: #E7F8F7;
-    font-family: 'Quicksand', sans-serif !important;
-    padding: 20px; /* Add padding for better spacing */
-    border-left: 5px solid #CD2355;
-    margin: 20px 20px; /* Add margin to the left and right of the collapsible content */
-    border-radius: 8px;
-    color: #222222;
-    box-sizing: border-box;
-    display: block;
-    overflow: hidden; /* Prevents overflowing elements */
+	background-color: #E7F8F7;
+	font-family: 'Quicksand', sans-serif !important;
+	padding: 20px; /* Add padding for better spacing */
+	border-left: 5px solid #CD2355;
+	margin: 0 auto; /* Center the content block */
+	max-width: calc(100% - 80px); /* Prevent the content from overflowing the block */
+	color: #222222;
+	box-sizing: border-box;
+	display: block;
+	overflow: hidden !important; /* Prevents overflowing elements */
 }
 
 .content iframe {
@@ -261,6 +261,7 @@ details .content {
 	margin: 0 auto !important;  /* Center the iframe */
 	padding: 0 !important;
 	border: none;
+	overflow: hidden !important; /* Prevents overflowing elements */
 }
 
 /* Specific adjustment for portrait documents */
