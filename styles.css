@@ -239,6 +239,11 @@ details summary:hover {
     background-color: #232E9B;
 }
 
+/* Add spacing between the closed button and the next content */
+details:not([open]) {
+    margin-bottom: 20px; /* Adds spacing when content is hidden */
+}
+
 /* Collapsible Content */
 details .content {
     background-color: #E7F8F7;
