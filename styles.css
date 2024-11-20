@@ -227,7 +227,7 @@ details summary {
 
 details[open] summary {
 	background-color: #232E9B;
-	margin-bottom: 10px !important; /* Reduce margin between button and content */
+	margin-bottom: 0px !important; /* Reduce margin between button and content */
 }
 
 details summary:hover {
