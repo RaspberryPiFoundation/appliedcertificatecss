@@ -253,6 +253,11 @@ details .content {
 	overflow: hidden !important; /* Prevents overflowing elements */
 }
 
+/* Add spacing below the collapsible detailed content when open */
+details[open] .content {
+    margin-bottom: 30px; /* Increase spacing between content box and next page content */
+}
+
 .content iframe {
 	width: 100% !important;
 	max-width: 100% !important;  /* Prevent any width restrictions */
