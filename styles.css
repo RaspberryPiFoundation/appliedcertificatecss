@@ -32,12 +32,14 @@
 
 /* General styling for block titles using data-title */
 .learn::before, .notes::before, .task::before {
-    display: inline-flex; /* Align icon and text in a row */
-    align-items: center; /* Vertically align icon and text */
-    font-size: 24px; /* Icon size */
-    font-weight: 900; /* Bold font for the icon */
-    margin-bottom: 15px; /* Adds spacing below the title */
-    box-sizing: border-box;
+	display: inline-flex; /* Align icon and text in a row */
+	align-items: center; /* Vertically align icon and text */
+	font-size: 24px; /* Icon size */
+	font-weight: 900; /* Bold font for the icon */
+	margin-bottom: 15px; /* Adds spacing below the title */
+	box-sizing: border-box;
+	margin-right: 8px; /* Space between icon and title text */
+	margin-left: 20px
 }
 
 .learn::before {
@@ -45,8 +47,6 @@
 	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icon */
 	font-weight: 900; /* Font weight required for solid icons */
 	color: #CD2355; /* Icon color for Learn block */
-	margin-right: 8px; /* Space between icon and title text */
-	margin-left: 20px
 }
 
 .learn::after {
@@ -64,8 +64,6 @@
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: #317C35; /* Icon color for Notes block */
-    margin-right: 8px;
-	margin-left: 20px
 }
 
 .notes::after {
@@ -83,8 +81,6 @@
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: #6B3687; /* Icon color for Task block */
-    margin-right: 8px;
-	margin-left: 20px
 }
 
 .task::after {
@@ -93,17 +89,16 @@
     font-size: 24px;
     font-weight: 900;
     color: #6B3687; /* Title color for Task block */
-    margin-left: 8px;
-    display: inline;
 }
 
 /* Block-specific styling */
 .notes, .task, .learn {
-    position: relative;
-    padding-top: 20px; /* Creates space for the title */
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+	position: relative;
+	padding-top: 20px; /* Creates space for the title */
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	margin-left: 20px
 }
 
 .notes {
@@ -126,12 +121,12 @@
 	color: #317C35 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 24px !important;
-	font-weight: 700 !important;
+	font-weight: 900 !important;
 	box-sizing: border-box;
-	margin-left: 20px; /* Add left margin */
-	margin-right: 0;
-	margin-top: 0; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px; /* Consistent spacing below */
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
 	text-transform: none !important;
 }
 
@@ -139,12 +134,12 @@
 	color: #6B3687 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 24px !important;
-	font-weight: 700 !important;
+	font-weight: 900 !important;
 	box-sizing: border-box;
-	margin-left: 20px; /* Add left margin */
-	margin-right: 0;
-	margin-top: 0; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px; /* Consistent spacing below */
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
 	text-transform: none !important;
 }
 
@@ -152,12 +147,12 @@
 	color: #CD2355 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 24px !important;
-	font-weight: 700 !important;
+	font-weight: 900 !important;
 	box-sizing: border-box;
-	margin-left: 20px; /* Add left margin */
-	margin-right: 0;
-	margin-top: 0; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px; /* Consistent spacing below */
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
 	text-transform: none !important;
 }
 
@@ -169,10 +164,10 @@
 	font-size: 18px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-left: 20px; /* Add left margin */
-	margin-right: 0;
-	margin-top: 0; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px; /* Consistent spacing below */
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
 	text-transform: none !important;
 }
 
@@ -182,10 +177,10 @@
 	font-size: 18px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-left: 20px; /* Add left margin */
-	margin-right: 0;
-	margin-top: 0; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px; /* Consistent spacing below */
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
 	text-transform: none !important;
 }
 
@@ -195,10 +190,10 @@
 	font-size: 18px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
-	margin-left: 20px; /* Add left margin */
-	margin-right: 0;
-	margin-top: 0; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px; /* Consistent spacing below */
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
 	text-transform: none !important;
 }
 
