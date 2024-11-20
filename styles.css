@@ -349,7 +349,7 @@ details .content {
 	margin-right: auto;
 	max-width: 100%;
 	height: auto;
-	padding-bottom: 5px; /* Small padding below the image */
+	padding-bottom: 15px; /* Small padding below the image */
 }
 
 /* Style for the image caption */
