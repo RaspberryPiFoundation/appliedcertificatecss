@@ -159,17 +159,6 @@
 }
 
 /* Style for h3 within the blocks */
-.notes h3, .task h3, .learn h3 {
-	color: #222222 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 20px !important;
-	font-weight: 700 !important;
-	box-sizing: border-box;
-	margin-left: 20px; /* Add left margin */
-	margin-right: 0;
-	margin-top: 0; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px; /* Consistent spacing below */
-}
 
 .notes h3 {
 	color: #222222 !important;
