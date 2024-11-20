@@ -220,7 +220,7 @@ details summary {
     font-size: 20px;
     font-family: 'Quicksand', sans-serif !important;
     font-weight: bold;
-    padding: 40px 40px;
+    padding: 20px 20px;
     border-radius: 8px;
     width: auto; /* Allow the button to size based on content */
     max-width: calc(100% - 80px); /* Prevent the button from exceeding the screen width, accounting for left/right margins */
@@ -245,7 +245,7 @@ details .content {
     font-family: 'Quicksand', sans-serif !important;
     padding: 20px; /* Add padding for better spacing */
     border-left: 5px solid #CD2355;
-    margin: 40px 40px; /* Add margin to the left and right of the collapsible content */
+    margin: 20px 20px; /* Add margin to the left and right of the collapsible content */
     border-radius: 8px;
     color: #222222;
     box-sizing: border-box;
