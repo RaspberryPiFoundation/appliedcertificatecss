@@ -132,6 +132,7 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
+	text-transform: none !important;
 }
 
 .task h2 {
@@ -144,6 +145,7 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
+	text-transform: none !important;
 }
 
 .learn h2 {
@@ -156,6 +158,7 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
+	text-transform: none !important;
 }
 
 /* Style for h3 within the blocks */
@@ -170,6 +173,7 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
+	text-transform: none !important;
 }
 
 .learn h3 {
@@ -182,6 +186,7 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
+	text-transform: none !important;
 }
 
 .task h3 {
@@ -194,6 +199,7 @@
 	margin-right: 0;
 	margin-top: 0; /* Optional: Ensure consistent spacing above */
 	margin-bottom: 15px; /* Consistent spacing below */
+	text-transform: none !important;
 }
 
 /* Ensure consistent spacing for paragraphs within blocks */
