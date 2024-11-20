@@ -166,7 +166,7 @@
 .notes h3 {
 	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 20px !important;
+	font-size: 18px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
 	margin-left: 20px; /* Add left margin */
@@ -179,7 +179,7 @@
 .learn h3 {
 	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 20px !important;
+	font-size: 18px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
 	margin-left: 20px; /* Add left margin */
@@ -192,7 +192,7 @@
 .task h3 {
 	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
-	font-size: 20px !important;
+	font-size: 18px !important;
 	font-weight: 700 !important;
 	box-sizing: border-box;
 	margin-left: 20px; /* Add left margin */
@@ -222,12 +222,13 @@ details summary {
 	font-weight: bold;
 	padding: 14px 20px;
 	border-radius: 8px;
-	width: 100%;
+	width: 50%;
+	align: center;
 	box-sizing: border-box;
 	display: block;
 	text-align: center;
 	cursor: pointer;
-	margin-bottom: 15px;
+	/* margin-bottom: 15px; */
 }
 
 details[open] summary {
@@ -244,13 +245,13 @@ details .content {
 	font-family: 'Quicksand', sans-serif !important;
 	padding: 10px;
 	border-left: 5px solid #CD2355;
-	margin-top: 5px;
+	/* margin-top: 5px;*/
 	border-radius: 8px;
 	color: #222222;
 	box-sizing: border-box;
 	width: 100%; /* Full width within the content box */
 	display: block;
-	margin-bottom: 15px; 
+	/* margin-bottom: 15px; */
 	overflow: hidden;  /* Prevents overflowing elements */
 }
 
