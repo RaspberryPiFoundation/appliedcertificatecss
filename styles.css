@@ -171,6 +171,42 @@
 	margin-bottom: 15px; /* Consistent spacing below */
 }
 
+.notes h3 {
+	color: #222222 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 20px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-left: 20px; /* Add left margin */
+	margin-right: 0;
+	margin-top: 0; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px; /* Consistent spacing below */
+}
+
+.learn h3 {
+	color: #222222 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 20px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-left: 20px; /* Add left margin */
+	margin-right: 0;
+	margin-top: 0; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px; /* Consistent spacing below */
+}
+
+.task h3 {
+	color: #222222 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 20px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-left: 20px; /* Add left margin */
+	margin-right: 0;
+	margin-top: 0; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px; /* Consistent spacing below */
+}
+
 /* Ensure consistent spacing for paragraphs within blocks */
 .learn p, .notes p, .task p {
     padding: 0 20px; /* Adds consistent horizontal padding */
