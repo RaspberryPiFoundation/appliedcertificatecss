@@ -48,8 +48,9 @@
 	font-weight: 900; /* Solid icons */
 	font-size: 24px; /* Icon size */
 	position: absolute;
-	top: 15px;
-	left: 15px;
+	top: 15px !important;
+	left: 15px !important;
+	bottom: 40px !important;
 	color: inherit; /* Match the block's color */
 }
 
@@ -57,10 +58,10 @@
 .learn::after, .notes::after, .task::after {
 	content: attr(data-title); /* Pull title text dynamically */
 	position: absolute;
-	top: 15px;
-	left: 60px; /* Spaced to the right of the icon */
-	bottom: 40px; /* Space below the icon and title */
-	font-size: 22px; /* Title size */
+	top: 15px !important;
+	left: 60px !important; /* Spaced to the right of the icon */
+	bottom: 40px !important; /* Space below the icon and title */
+	font-size: 28px; /* Title size */
 	font-weight: 700; /* Bold text */
 	color: inherit; /* Match the block's color */
 }
@@ -101,7 +102,7 @@
     color: #317C35 !important; /* Notes header color */
     font-family: 'Quicksand', sans-serif !important;
     font-size: 22px !important;
-    font-weight: 900 !important;
+    font-weight: 700 !important;
     margin-top: 10px !important;
     margin-bottom: 15px !important;
 }
@@ -110,7 +111,7 @@
     color: #6B3687 !important; /* Task header color */
     font-family: 'Quicksand', sans-serif !important;
     font-size: 22px !important;
-    font-weight: 900 !important;
+    font-weight: 700 !important;
     margin-top: 10px !important;
     margin-bottom: 15px !important;
 }
@@ -119,7 +120,7 @@
     color: #CD2355 !important; /* Learn header color */
     font-family: 'Quicksand', sans-serif !important;
     font-size: 22px !important;
-    font-weight: 900 !important;
+    font-weight: 700 !important;
     margin-top: 10px !important;
     margin-bottom: 15px !important;
 }
