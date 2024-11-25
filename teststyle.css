@@ -59,6 +59,7 @@
 	position: absolute;
 	top: 15px;
 	left: 60px; /* Spaced to the right of the icon */
+	bottom: 40px; /* Space below the icon and title */
 	font-size: 22px; /* Title size */
 	font-weight: 700; /* Bold text */
 	color: inherit; /* Match the block's color */
