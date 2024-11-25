@@ -400,7 +400,7 @@ ul, ol {
 	color: #222222 !important; /* Match body text color */
 	font-size: 16px; /* Same font size as body text */
 	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
-	/*line-height: 1.6 !important; /* Match line-height for readability */
+	line-height: 1.6 !important; /* Match line-height for readability */
 	margin-left: 40px !important; /* Indent the list items */
 	margin-right: 40px !important;
 	margin-bottom: 20px !important; /* Add spacing after the list */
