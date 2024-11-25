@@ -32,67 +32,67 @@
 
 /* Block styling for alignment */
 .notes, .task, .learn {
-    display: flex; /* Align items in a row */
-    align-items: center; /* Vertically align icon and title */
-    position: relative; /* Necessary for pseudo-elements */
-    padding: 20px; /* Add consistent padding */
-    border-radius: 8px; /* Rounded corners */
-    margin-bottom: 20px; /* Space between blocks */
-    box-sizing: border-box;
-    margin-left: 20px;
-}
-
-/* Background and border colors for blocks */
-.notes {
-    background-color: #EDF7EE;
-    border: 2px solid #317C35;
-}
-
-.task {
-    background-color: #F4EEF7;
-    border: 2px solid #6B3687;
-}
-
-.learn {
-    background-color: #FCF3F6;
-    border: 2px solid #CD2355;
+	position: relative;
+	align-items: center; /* Vertically align icon and title */
+	padding: 20px; /* Add consistent padding */
+	border-radius: 8px; /* Rounded corners */
+	margin-bottom: 20px; /* Space between blocks */
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif !important; /* Consistent font */
+	margin-left: 20px;
 }
 
 /* Icon styling */
 .notes::before, .task::before, .learn::before {
-    content: ''; /* Placeholder to avoid misalignment */
-    font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
-    font-weight: 900; /* Solid icons */
-    font-size: 24px; /* Icon size */
-    margin-right: 8px; /* Space between icon and title */
-    display: inline-block; /* Align icon with text */
+	font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
+	font-weight: 900; /* Solid icons */
+	font-size: 24px; /* Icon size */
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	color: inherit; /* Match the block's color */
 }
 
-/* Specific icons for each block */
-.notes::before {
-    content: "\f27a"; /* Font Awesome comment icon */
-    color: #317C35; /* Icon color for Notes block */
+/* Title text styles */
+.learn::after, .notes::after, .task::after {
+	content: attr(data-title); /* Pull title text dynamically */
+	position: absolute;
+	top: 15px;
+	left: 60px; /* Spaced to the right of the icon */
+	font-size: 22px; /* Title size */
+	font-weight: 700; /* Bold text */
+	color: inherit; /* Match the block's color */
 }
 
-.task::before {
-    content: "\f14a"; /* Font Awesome tick icon */
-    color: #6B3687; /* Icon color for Task block */
+/* Specific block styles */
+.learn {
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
+	color: #CD2355; /* Title text and icon color */
 }
 
 .learn::before {
-    content: "\f02d"; /* Font Awesome book icon */
-    color: #CD2355; /* Icon color for Learn block */
+	content: "\f02d"; /* Book icon */
 }
 
-/* Title text styling */
-.notes::after, .task::after, .learn::after {
-    content: attr(data-title); /* Pull text from data-title attribute */
-    font-family: 'Quicksand', sans-serif; /* Title font */
-    font-size: 24px; /* Title font size */
-    font-weight: 900; /* Bold text */
-    color: inherit; /* Match block-specific colors */
-    display: inline-block; /* Align with icon */
-    margin-bottom: 0; /* Avoid extra space below title */
+.notes {
+	background-color: #EDF7EE;
+	border: 2px solid #317C35;
+	color: #317C35;
+}
+
+.notes::before {
+	content: "\f27a"; /* Comment icon */
+}
+
+.task {
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
+	color: #6B3687;
+}
+
+.task::before {
+	content: "\f14a"; /* Tick box icon */
 }
 
 /* h2 Header styling specific to blocks */
