@@ -30,19 +30,77 @@
 	box-sizing: border-box;
 }
 
-/* Block-specific styling for proper alignment of icon and title */
+/* General styling for block titles using data-title */
+.learn::before, .notes::before, .task::before {
+	display: inline-flex; /* Align icon and text in a row */
+	align-items: center; /* Vertically align icon and text */
+	font-size: 24px; /* Icon size */
+	font-weight: 900; /* Bold font for the icon */
+	margin-bottom: 15px; /* Adds spacing below the title */
+	box-sizing: border-box;
+	margin-right: 8px; /* Space between icon and title text */
+	margin-left: 20px
+}
+
+.learn::before {
+	content: "\f02d"; /* Font Awesome book icon */
+	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icon */
+	font-weight: 900; /* Font weight required for solid icons */
+	color: #CD2355; /* Icon color for Learn block */
+}
+
+.learn::after {
+	content: attr(data-title); /* Title text */
+	font-family: 'Quicksand', sans-serif; /* Title font */
+	font-size: 24px; /* Title font size */
+	font-weight: 900; /* Bold title text */
+	color: #CD2355; /* Title color for Learn block */
+	margin-left: 8px; /* Align spacing with icon */
+	display: inline; /* Ensure text stays aligned with icon */
+}
+
+.notes::before {
+	content: "\f27a"; /* Font Awesome comment icon */
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	color: #317C35; /* Icon color for Notes block */
+}
+
+.notes::after {
+	content: attr(data-title);
+	font-family: 'Quicksand', sans-serif;
+	font-size: 24px;
+	font-weight: 900;
+	color: #317C35; /* Title color for Notes block */
+	margin-left: 8px;
+	display: inline;
+}
+
+.task::before {
+	content: "\f14a"; /* Font Awesome tick icon */
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	color: #6B3687; /* Icon color for Task block */
+}
+
+.task::after {
+	content: attr(data-title);
+	font-family: 'Quicksand', sans-serif;
+	font-size: 24px;
+	font-weight: 900;
+	color: #6B3687; /* Title color for Task block */
+}
+
+/* Block-specific styling */
 .notes, .task, .learn {
-	display: flex; /* Align icon and text in a row */
-	align-items: center; /* Ensure vertical alignment of icon and text */
-	position: relative; /* Keep relative positioning */
-	padding: 10px 20px; /* Add padding for consistent spacing */
+	position: relative;
+	padding-top: 20px; /* Creates space for the title */
 	border-radius: 8px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
-	margin-left: 20px;
+	margin-left: 20px
 }
 
-/* Retain unique background and border colors */
 .notes {
 	background-color: #EDF7EE;
 	border: 2px solid #317C35;
@@ -56,46 +114,6 @@
 .learn {
 	background-color: #FCF3F6;
 	border: 2px solid #CD2355;
-}
-
-/* General styling for block titles using data-title */
-.learn::before, .notes::before, .task::before {
-	font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
-	font-weight: 900; /* Required for solid icons */
-	font-size: 24px; /* Icon size */
-	margin-right: 8px; /* Spacing between icon and text */
-	display: inline-block; /* Ensure proper alignment */
-}
-
-.learn::before {
-	content: "\f02d"; /* Font Awesome book icon */
-	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icon */
-	font-weight: 900; /* Font weight required for solid icons */
-	color: #CD2355; /* Icon color for Learn block */
-}
-
-.notes::before {
-	content: "\f27a"; /* Font Awesome comment icon */
-	font-family: "Font Awesome 6 Free";
-	font-weight: 900;
-	color: #317C35; /* Icon color for Notes block */
-}
-
-.task::before {
-	content: "\f14a"; /* Font Awesome tick icon */
-	font-family: "Font Awesome 6 Free";
-	font-weight: 900;
-	color: #6B3687; /* Icon color for Task block */
-}
-
-.learn::after, .notes::after, .task::after {
-	content: attr(data-title); /* Pull title from data-title attribute */
-	font-family: 'Quicksand', sans-serif; /* Use your desired font */
-	font-size: 24px; /* Same size as the icon */
-	font-weight: 900; /* Bold text for titles */
-	margin-left: 8px; /* Add spacing between icon and text */
-	color: inherit; /* Automatically match parent block's color */
-	display: inline-block; /* Align with icon */
 }
 
 /* Style for h2 within the blocks */
