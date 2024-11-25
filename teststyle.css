@@ -32,9 +32,8 @@
 
 /* Block-specific styling for proper alignment of icon and title */
 .notes, .task, .learn {
-	display: flex; /* Align icon, title, and content in a row */
-	flex-direction: column; /* Stack the title above the content */
-	align-items: flex-start; /* Align items to the left */
+	display: inline-flex; /* Align icon and title in a single row */
+	align-items: center; /* Vertically align items */
 	position: relative; /* Keep relative positioning for pseudo-elements */
 	padding: 20px; /* Add padding for consistent spacing */
 	border-radius: 8px; /* Keep rounded corners */
@@ -59,23 +58,25 @@
 	border: 2px solid #CD2355;
 }
 
+/* Icon styling for blocks */
 .learn::before, .notes::before, .task::before {
-	content: ''; /* Prevents text misalignment issues */
-	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icons */
-	font-weight: 900; /* Bold for solid icons */
+	content: attr(data-title); /* Set title for testing alignment */
+	font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
+	font-weight: 900; /* Bold solid icons */
 	font-size: 24px; /* Icon size */
-	color: inherit; /* Matches block-specific colors */
+	color: inherit; /* Inherit block-specific colors */
 	margin-right: 8px; /* Space between icon and title text */
-	display: inline-block; /* Aligns icon with text */
+	display: inline-block; /* Inline-block for proper alignment */
 }
 
+/* Title text styling for blocks */
 .learn::after, .notes::after, .task::after {
-	content: attr(data-title); /* Title text */
-	font-family: 'Quicksand', sans-serif; /* Use your preferred font */
-	font-size: 24px; /* Font size */
+	content: attr(data-title); /* Set title text */
+	font-family: 'Quicksand', sans-serif; /* Font for title text */
+	font-size: 24px; /* Font size for title text */
 	font-weight: 900; /* Bold for emphasis */
-	color: inherit; /* Matches block-specific colors */
-	display: inline-block; /* Aligns text with the icon */
+	color: inherit; /* Match block-specific colors */
+	display: inline; /* Ensure proper alignment with the icon */
 }
 
 /* Style for h2 within the blocks */
