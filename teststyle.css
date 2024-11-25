@@ -30,99 +30,116 @@
 	box-sizing: border-box;
 }
 
-/* Block styling for proper alignment */
+/* Block styling for alignment */
 .notes, .task, .learn {
-	display: flex !important; /* Align icon and title in a single row */
-	flex-wrap: wrap !important; /* Allow content to wrap below the title */
-	align-items: flex-start !important; /* Align items to the top */
-	position: relative !important; /* Ensure pseudo-elements remain relative */
-	padding: 20px !important; /* Add consistent padding */
-	border-radius: 8px !important; /* Rounded corners */
-	margin-bottom: 20px !important; /* Space between blocks */
-	box-sizing: border-box !important;
-	margin-left: 20px !important;
+    display: flex; /* Align items in a row */
+    align-items: center; /* Vertically align icon and title */
+    position: relative; /* Necessary for pseudo-elements */
+    padding: 20px; /* Add consistent padding */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between blocks */
+    box-sizing: border-box;
+    margin-left: 20px;
 }
 
-/* Retain unique background and border colors */
+/* Background and border colors for blocks */
 .notes {
-	background-color: #EDF7EE;
-	border: 2px solid #317C35;
+    background-color: #EDF7EE;
+    border: 2px solid #317C35;
 }
 
 .task {
-	background-color: #F4EEF7;
-	border: 2px solid #6B3687;
+    background-color: #F4EEF7;
+    border: 2px solid #6B3687;
 }
 
 .learn {
-	background-color: #FCF3F6;
-	border: 2px solid #CD2355;
+    background-color: #FCF3F6;
+    border: 2px solid #CD2355;
 }
 
 /* Icon styling */
-.notes::before,
-.task::before,
-.learn::before {
-	content: ''; /* Default content */
-	font-family: "Font Awesome 6 Free"; /* Use Font Awesome */
-	font-weight: 900; /* Required for solid icons */
-	font-size: 24px; /* Icon size */
-	margin-right: 8px; /* Space between icon and title */
-	display: inline-block; /* Aligns icon with text */
+.notes::before, .task::before, .learn::before {
+    content: ''; /* Placeholder to avoid misalignment */
+    font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
+    font-weight: 900; /* Solid icons */
+    font-size: 24px; /* Icon size */
+    margin-right: 8px; /* Space between icon and title */
+    display: inline-block; /* Align icon with text */
 }
 
 /* Specific icons for each block */
 .notes::before {
-	content: "\f27a"; /* Comment icon */
-	color: #317C35; /* Notes icon color */
+    content: "\f27a"; /* Font Awesome comment icon */
+    color: #317C35; /* Icon color for Notes block */
 }
 
 .task::before {
-	content: "\f14a"; /* Tick icon */
-	color: #6B3687; /* Task icon color */
+    content: "\f14a"; /* Font Awesome tick icon */
+    color: #6B3687; /* Icon color for Task block */
 }
 
 .learn::before {
-	content: "\f02d"; /* Book icon */
-	color: #CD2355; /* Learn icon color */
+    content: "\f02d"; /* Font Awesome book icon */
+    color: #CD2355; /* Icon color for Learn block */
 }
 
 /* Title text styling */
-.notes::after,
-.task::after,
-.learn::after {
-	content: attr(data-title) !important; /* Pull text from data-title attribute */
-	font-family: 'Quicksand', sans-serif !important; /* Title font */
-	font-size: 24px !important; /* Title font size */
-	font-weight: 900 !important; /* Bold text */
-	color: inherit !important; /* Match block-specific colors */
-	margin-right: 10px !important; /* Space after the title */
-	display: inline-block !important; /* Ensure alignment */
-	margin-bottom: 8px !important; /* Add spacing between title and content */
+.notes::after, .task::after, .learn::after {
+    content: attr(data-title); /* Pull text from data-title attribute */
+    font-family: 'Quicksand', sans-serif; /* Title font */
+    font-size: 24px; /* Title font size */
+    font-weight: 900; /* Bold text */
+    color: inherit; /* Match block-specific colors */
+    display: inline-block; /* Align with icon */
+    margin-bottom: 0; /* Avoid extra space below title */
 }
 
-/* Ensure content is styled correctly within the block */
-.notes h2, .task h2, .learn h2 {
-	margin-top: 10px !important; /* Space between title and the first header */
-	color: inherit !important; /* Use inherited color for consistency */
-	font-size: 22px !important; /* Adjust header font size */
-	font-weight: 900 !important; /* Slightly less bold for headers */
+/* h2 Header styling specific to blocks */
+.notes h2 {
+    color: #317C35 !important; /* Notes header color */
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
 }
 
-/* Ensure content is styled correctly within the block */
+.task h2 {
+    color: #6B3687 !important; /* Task header color */
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+}
+
+.learn h2 {
+    color: #CD2355 !important; /* Learn header color */
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+}
+
+/* h3 Header styling specific to blocks */
 .notes h3, .task h3, .learn h3 {
-	margin-top: 10px !important; /* Space between title and the first header */
-	color: inherit !important; /* Use inherited color for consistency */
-	font-size: 20px !important; /* Adjust header font size */
-	font-weight: 700 !important; /* Slightly less bold for headers */
+    color: #222222 !important;
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
 }
 
+/* Paragraph styling */
 .notes p, .task p, .learn p {
-	font-family !important: 'Quicksand', sans-serif; /* Apply your preferred font */
-	margin-top: 10px !important; /* Space between title and paragraphs */
-	color: #222222 !important; /* Standard paragraph text */
-	font-size: 16px !important; /* Ensure readability */
-	line-height: 1.6 !important; /* Improve readability */
+    font-family: 'Quicksand', sans-serif !important;
+    margin-top: 10px !important;
+    color: #222222 !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
 }
 
 
