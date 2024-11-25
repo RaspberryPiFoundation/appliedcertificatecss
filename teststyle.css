@@ -30,16 +30,17 @@
 	box-sizing: border-box;
 }
 
-/* Block-specific styling for proper alignment of icon and title */
+/* Block styling for proper alignment */
 .notes, .task, .learn {
-	display: flex; /* Align icon, title, and content in a single row */
-	align-items: center; /* Vertically align items */
-	position: relative; /* Keep relative positioning for pseudo-elements */
-	padding: 20px; /* Add padding for consistent spacing */
-	border-radius: 8px; /* Keep rounded corners */
-	margin-bottom: 20px; /* Space between blocks */
-	box-sizing: border-box;
-	margin-left: 20px;
+	display: flex !important; /* Align icon and title in a single row */
+	flex-wrap: wrap !important; /* Allow content to wrap below the title */
+	align-items: flex-start !important; /* Align items to the top */
+	position: relative !important; /* Ensure pseudo-elements remain relative */
+	padding: 20px !important; /* Add consistent padding */
+	border-radius: 8px !important; /* Rounded corners */
+	margin-bottom: 20px !important; /* Space between blocks */
+	box-sizing: border-box !important;
+	margin-left: 20px !important;
 }
 
 /* Retain unique background and border colors */
@@ -58,136 +59,70 @@
 	border: 2px solid #CD2355;
 }
 
-/* Unique icon styling for blocks */
+/* Icon styling */
+.notes::before,
+.task::before,
 .learn::before {
-	content: "\f02d"; /* Font Awesome book icon */
-	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icons */
-	font-weight: 900; /* Bold solid icons */
+	content: ''; /* Default content */
+	font-family: "Font Awesome 6 Free"; /* Use Font Awesome */
+	font-weight: 900; /* Required for solid icons */
 	font-size: 24px; /* Icon size */
-	color: #CD2355; /* Color specific to Learn block */
-	margin-right: 8px; /* Space between icon and text */
-	display: inline-block; /* Align icon with text */
+	margin-right: 8px; /* Space between icon and title */
+	display: inline-block; /* Aligns icon with text */
 }
 
+/* Specific icons for each block */
 .notes::before {
-	content: "\f27a"; /* Font Awesome comment icon */
-	font-family: "Font Awesome 6 Free";
-	font-weight: 900;
-	font-size: 24px;
-	color: #317C35; /* Color specific to Notes block */
-	margin-right: 8px;
-	display: inline-block;
+	content: "\f27a"; /* Comment icon */
+	color: #317C35; /* Notes icon color */
 }
 
 .task::before {
-	content: "\f14a"; /* Font Awesome tick icon */
-	font-family: "Font Awesome 6 Free";
-	font-weight: 900;
-	font-size: 24px;
-	color: #6B3687; /* Color specific to Task block */
-	margin-right: 8px;
-	display: inline-block;
+	content: "\f14a"; /* Tick icon */
+	color: #6B3687; /* Task icon color */
 }
 
-/* Title text styling for blocks */
-.learn::after, .notes::after, .task::after {
-	content: attr(data-title); /* Title text */
-	font-family: 'Quicksand', sans-serif; /* Use your preferred font */
-	font-size: 24px; /* Font size for title text */
-	font-weight: 900; /* Bold for emphasis */
-	color: inherit; /* Match block-specific colors */
-	margin-left: 8px; /* Space between icon and title */
-	display: inline-block; /* Align text with the icon */
+.learn::before {
+	content: "\f02d"; /* Book icon */
+	color: #CD2355; /* Learn icon color */
 }
 
-/* Style for h2 within the blocks */
-.notes h2 {
-	color: #317C35 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 24px !important;
-	font-weight: 900 !important;
-	box-sizing: border-box;
-	margin-left: 20px !important; /* Add left margin */
-	margin-right: 0 !important;
-	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px !important; /* Consistent spacing below */
-	text-transform: none !important;
+/* Title text styling */
+.notes::after,
+.task::after,
+.learn::after {
+	content: attr(data-title) !important; /* Pull text from data-title attribute */
+	font-family: 'Quicksand', sans-serif !important; /* Title font */
+	font-size: 24px !important; /* Title font size */
+	font-weight: 900 !important; /* Bold text */
+	color: inherit !important; /* Match block-specific colors */
+	margin-right: 10px !important; /* Space after the title */
+	display: inline-block !important; /* Ensure alignment */
+	margin-bottom: 8px !important; /* Add spacing between title and content */
 }
 
-.task h2 {
-	color: #6B3687 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 24px !important;
-	font-weight: 900 !important;
-	box-sizing: border-box;
-	margin-left: 20px !important; /* Add left margin */
-	margin-right: 0 !important;
-	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px !important; /* Consistent spacing below */
-	text-transform: none !important;
+/* Ensure content is styled correctly within the block */
+.notes h2, .task h2, .learn h2 {
+	margin-top: 10px !important; /* Space between title and the first header */
+	color: inherit !important; /* Use inherited color for consistency */
+	font-size: 22px !important; /* Adjust header font size */
+	font-weight: 900 !important; /* Slightly less bold for headers */
 }
 
-.learn h2 {
-	color: #CD2355 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 24px !important;
-	font-weight: 900 !important;
-	box-sizing: border-box;
-	margin-left: 20px !important; /* Add left margin */
-	margin-right: 0 !important;
-	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px !important; /* Consistent spacing below */
-	text-transform: none !important;
+/* Ensure content is styled correctly within the block */
+.notes h3, .task h3, .learn h3 {
+	margin-top: 10px !important; /* Space between title and the first header */
+	color: inherit !important; /* Use inherited color for consistency */
+	font-size: 20px !important; /* Adjust header font size */
+	font-weight: 700 !important; /* Slightly less bold for headers */
 }
 
-/* Style for h3 within the blocks */
-.notes h3 {
-  color: #222222 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 18px !important;
-	font-weight: 700 !important;
-	box-sizing: border-box;
-	margin-left: 20px !important; /* Add left margin */
-	margin-right: 0 !important;
-	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px !important; /* Consistent spacing below */
-	text-transform: none !important;
-}
-
-.learn h3 {
-	color: #222222 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 18px !important;
-	font-weight: 700 !important;
-	box-sizing: border-box;
-	margin-left: 20px !important; /* Add left margin */
-	margin-right: 0 !important;
-	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px !important; /* Consistent spacing below */
-	text-transform: none !important;
-}
-
-.task h3 {
-	color: #222222 !important;
-	font-family: 'Quicksand', sans-serif !important;
-	font-size: 18px !important;
-	font-weight: 700 !important;
-	box-sizing: border-box;
-	margin-left: 20px !important; /* Add left margin */
-	margin-right: 0 !important;
-	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
-	margin-bottom: 15px !important; /* Consistent spacing below */
-	text-transform: none !important;
-}
-
-/* Ensure consistent spacing for paragraphs within blocks */
 .notes p, .task p, .learn p {
-  margin-top: 10px; /* Add spacing between title and content */
-	text-align: left; /* Ensure all content is left-aligned */
-	font-size: 16px; /* Consistent font size */
-	font-family: 'Quicksand', sans-serif; /* Apply your preferred font */
-	line-height: 1.6; /* Improve readability */
-	color: #222222; /* Default text color */
+	font-family !important: 'Quicksand', sans-serif; /* Apply your preferred font */
+	margin-top: 10px !important; /* Space between title and paragraphs */
+	color: #222222 !important; /* Standard paragraph text */
+	font-size: 16px !important; /* Ensure readability */
+	line-height: 1.6 !important; /* Improve readability */
 }
 
 
