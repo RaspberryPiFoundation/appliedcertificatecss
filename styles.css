@@ -7,6 +7,7 @@
 	text-align: center !important;
 	margin-bottom: 20px !important;
 	box-sizing: border-box;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* Lesson Heading */
@@ -18,6 +19,7 @@
 	text-align: center !important;
 	margin-bottom: 20px !important;
 	box-sizing: border-box;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* General Paragraph Text */
@@ -99,40 +101,44 @@
 
 /* h2 Header styling specific to blocks */
 .notes h2 {
-    color: #317C35 !important; /* Notes header color */
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 22px !important;
-    font-weight: 700 !important;
-    margin-top: 10px !important;
-    margin-bottom: 15px !important;
+	color: #317C35 !important; /* Notes header color */
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 22px !important;
+	font-weight: 700 !important;
+	margin-top: 10px !important;
+	margin-bottom: 15px !important;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 .task h2 {
-    color: #6B3687 !important; /* Task header color */
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 22px !important;
-    font-weight: 700 !important;
-    margin-top: 10px !important;
-    margin-bottom: 15px !important;
+	color: #6B3687 !important; /* Task header color */
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 22px !important;
+	font-weight: 700 !important;
+	margin-top: 10px !important;
+	margin-bottom: 15px !important;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 .learn h2 {
-    color: #CD2355 !important; /* Learn header color */
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 22px !important;
-    font-weight: 700 !important;
-    margin-top: 10px !important;
-    margin-bottom: 15px !important;
+	color: #CD2355 !important; /* Learn header color */
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 22px !important;
+	font-weight: 700 !important;
+	margin-top: 10px !important;
+	margin-bottom: 15px !important;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* h3 Header styling specific to blocks */
 .notes h3, .task h3, .learn h3 {
-    color: #222222 !important;
-    font-family: 'Quicksand', sans-serif !important;
-    font-size: 20px !important;
-    font-weight: 700 !important;
-    margin-top: 10px !important;
-    margin-bottom: 15px !important;
+	color: #222222 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 20px !important;
+	font-weight: 700 !important;
+	margin-top: 10px !important;
+	margin-bottom: 15px !important;
+	text-transform: none !important; /* Remove forced uppercase */
 }
 
 /* Paragraph styling */
