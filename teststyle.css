@@ -40,6 +40,7 @@
 	box-sizing: border-box;
 	font-family: 'Quicksand', sans-serif !important; /* Consistent font */
 	margin-left: 20px;
+	padding-top: 60px !important; /* Add more space at the top for icon and title */
 }
 
 /* Icon styling */
