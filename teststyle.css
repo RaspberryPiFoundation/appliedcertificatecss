@@ -50,7 +50,6 @@
 	position: absolute;
 	top: 15px !important;
 	left: 15px !important;
-	bottom: 40px !important;
 	color: inherit; /* Match the block's color */
 }
 
@@ -60,10 +59,10 @@
 	position: absolute;
 	top: 15px !important;
 	left: 60px !important; /* Spaced to the right of the icon */
-	bottom: 40px !important; /* Space below the icon and title */
 	font-size: 28px; /* Title size */
 	font-weight: 700; /* Bold text */
 	color: inherit; /* Match the block's color */
+	margin-bottom: 20px !important; /* Adds spacing below title and icon */
 }
 
 /* Specific block styles */
