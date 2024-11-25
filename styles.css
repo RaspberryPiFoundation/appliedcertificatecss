@@ -409,5 +409,5 @@ ul, ol {
 
 /* General list item styling */
 ul li, ol li {
-	margin-bottom: 10px !important; /* Add spacing between list items */
+	margin-bottom: 0px !important; /* Add spacing between list items */
 }
