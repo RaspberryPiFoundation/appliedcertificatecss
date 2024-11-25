@@ -1,0 +1,375 @@
+/* Style for Edly page title to match lesson title */
+.unit-title {
+	font-size: 1.8em !important;
+	font-family: 'Quicksand', sans-serif !important;
+	color: #CD2355 !important;
+	font-weight: 900 !important;
+	text-align: center !important;
+	margin-bottom: 20px !important;
+	box-sizing: border-box;
+}
+
+/* Lesson Heading */
+#rpf-lesson-title {
+	font-size: 1.8em !important;
+	font-family: 'Quicksand', sans-serif !important;
+	color: #CD2355 !important;
+	font-weight: 900 !important;
+	text-align: center !important;
+	margin-bottom: 20px !important;
+	box-sizing: border-box;
+}
+
+/* General Paragraph Text */
+.rpf-text {
+	font-size: 16px;
+	font-family: 'Quicksand', sans-serif !important;
+	color: #222222;
+	line-height: 1.6;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+/* Block-specific styling for proper alignment of icon and title */
+.notes, .task, .learn {
+	display: flex; /* Align icon, title, and content in a row */
+	flex-direction: column; /* Stack the title above the content */
+	align-items: flex-start; /* Align items to the left */
+	position: relative; /* Keep relative positioning for pseudo-elements */
+	padding: 20px; /* Add padding for consistent spacing */
+	border-radius: 8px; /* Keep rounded corners */
+	margin-bottom: 20px; /* Space between blocks */
+	box-sizing: border-box;
+	margin-left: 20px;
+}
+
+/* Retain unique background and border colors */
+.notes {
+	background-color: #EDF7EE;
+	border: 2px solid #317C35;
+}
+
+.task {
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
+}
+
+.learn {
+	background-color: #FCF3F6;
+	border: 2px solid #CD2355;
+}
+
+.learn::before, .notes::before, .task::before {
+	content: ''; /* Prevents text misalignment issues */
+	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icons */
+	font-weight: 900; /* Bold for solid icons */
+	font-size: 24px; /* Icon size */
+	color: inherit; /* Matches block-specific colors */
+	margin-right: 8px; /* Space between icon and title text */
+	display: inline-block; /* Aligns icon with text */
+}
+
+.learn::after, .notes::after, .task::after {
+	content: attr(data-title); /* Title text */
+	font-family: 'Quicksand', sans-serif; /* Use your preferred font */
+	font-size: 24px; /* Font size */
+	font-weight: 900; /* Bold for emphasis */
+	color: inherit; /* Matches block-specific colors */
+	display: inline-block; /* Aligns text with the icon */
+}
+
+/* Style for h2 within the blocks */
+.notes h2 {
+	color: #317C35 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 900 !important;
+	box-sizing: border-box;
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
+	text-transform: none !important;
+}
+
+.task h2 {
+	color: #6B3687 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 900 !important;
+	box-sizing: border-box;
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
+	text-transform: none !important;
+}
+
+.learn h2 {
+	color: #CD2355 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 24px !important;
+	font-weight: 900 !important;
+	box-sizing: border-box;
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
+	text-transform: none !important;
+}
+
+/* Style for h3 within the blocks */
+.notes h3 {
+  color: #222222 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 18px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
+	text-transform: none !important;
+}
+
+.learn h3 {
+	color: #222222 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 18px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
+	text-transform: none !important;
+}
+
+.task h3 {
+	color: #222222 !important;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 18px !important;
+	font-weight: 700 !important;
+	box-sizing: border-box;
+	margin-left: 20px !important; /* Add left margin */
+	margin-right: 0 !important;
+	margin-top: 0 !important; /* Optional: Ensure consistent spacing above */
+	margin-bottom: 15px !important; /* Consistent spacing below */
+	text-transform: none !important;
+}
+
+/* Ensure consistent spacing for paragraphs within blocks */
+.notes p, .task p, .learn p {
+  margin-top: 10px; /* Add spacing between title and content */
+	text-align: left; /* Ensure all content is left-aligned */
+	font-size: 16px; /* Consistent font size */
+	font-family: 'Quicksand', sans-serif; /* Apply your preferred font */
+	line-height: 1.6; /* Improve readability */
+	color: #222222; /* Default text color */
+}
+
+
+/* Collapsible Button */
+details summary {
+    background-color: #232D9A;
+    color: white;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif !important;
+    font-weight: bold;
+    padding: 20px 20px;
+    border-radius: 8px;
+    width: auto; /* Allow the button to size based on content */
+    max-width: calc(100% - 80px); /* Prevent the button from exceeding the screen width, accounting for left/right margins */
+    margin: 0 auto; /* Center the button horizontally */
+    box-sizing: border-box;
+    display: block;
+    text-align: center; /* Ensure text is centered */
+    cursor: pointer;
+}
+
+details[open] summary {
+	background-color: #232E9B;
+	margin-bottom: 0px !important; /* Reduce margin between button and content */
+}
+
+details summary:hover {
+    background-color: #232E9B;
+}
+
+/* Add spacing between the closed button and the next content */
+details:not([open]) {
+    margin-bottom: 20px !important; /* Adds spacing when content is hidden */
+}
+
+/* Collapsible Content */
+details .content {
+	background-color: #E7F8F7;
+	font-family: 'Quicksand', sans-serif !important;
+	padding: 20px; /* Add padding for better spacing */
+	border-left: 5px solid #CD2355;
+	margin: 0 auto; /* Center the content block */
+	max-width: calc(100% - 80px); /* Prevent the content from overflowing the block */
+	color: #222222;
+	box-sizing: border-box;
+	display: block;
+	overflow: hidden !important; /* Prevents overflowing elements */
+}
+
+/* Add spacing below the collapsible detailed content when open */
+details[open] .content {
+    margin-bottom: 30px; /* Increase spacing between content box and next page content */
+}
+
+.content iframe {
+	width: 100% !important;
+	max-width: 100% !important;  /* Prevent any width restrictions */
+	height: calc(100vw * 9 / 16);  /* Keep a 16:9 aspect ratio */
+	max-height: 700px;  /* Limit max height for larger screens */
+	margin: 0 auto !important;  /* Center the iframe */
+	padding: 0 !important;
+	border: none;
+	overflow: hidden !important; /* Prevents overflowing elements */
+}
+
+/* Specific adjustment for portrait documents */
+.content.portrait iframe {
+	height: calc(100vw * 16 / 9);  /* Inverts aspect ratio for portrait documents */
+}
+
+/* General Video Block Container */
+.xblock.xmodule_VideoBlock {
+	background-color: #F4EEF7;
+	padding: 20px;
+	border-radius: 8px;
+	box-sizing: border-box; 
+}
+
+/* Override the grey background on the video block */
+.xmodule_display.xmodule_VideoBlock .video {
+	background: #F4EEF7 !important;
+	margin: 0 !important;
+	padding: 12px !important;
+	border-radius: 5px !important;
+	outline: none !important;
+	box-sizing: border-box;
+}
+
+/* General Video Block Title */
+.xblock.xmodule_VideoBlock .hd-2 {
+	color: #CD2355;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	box-sizing: border-box;
+}
+
+/* General Transcript Container */
+.subtitles {
+	background-color: #FCF3F6;
+	padding: 15px;
+	color: #222222;
+	border-radius: 8px;
+	border-left: 5px solid #CD2355;
+	box-sizing: border-box;
+}
+
+/* Transcript text */
+.subtitles ol.subtitles-menu span {
+	color: #222222;
+	font-size: 16px;
+	font-family: 'Quicksand', sans-serif;
+	line-height: 1.6;
+	box-sizing: border-box;
+}
+
+/* Transcript Heading */
+.subtitles h3 {
+	color: #CD2355;
+	font-size: 18px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+	box-sizing: border-box;
+}
+
+/* Transcript Links (for skip to start/end) */
+.subtitles a {
+	color: #232e9b;
+	text-decoration: underline;
+	box-sizing: border-box; 
+}
+
+.subtitles a:hover {
+	color: #c51d4a;
+	box-sizing: border-box;
+}
+
+/* Style for the image container */
+.image-container {
+	text-align: center; /* Centers the image and the caption */
+	margin-bottom: 20px; /* Adds space below the image */
+}
+
+/* Style for the image */
+.images {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	height: auto;
+	padding-bottom: 15px; /* Small padding below the image */
+}
+
+/* Style for the image caption */
+.image-caption {
+	font-size: 12px; /* Makes the caption smaller */
+	font-family: 'Quicksand', sans-serif !important;
+	color: #777; /* Muted text color */
+	text-align: center;
+	margin-top: 5px; /* Small margin between the image and caption */
+	padding: 0; /* Minimal padding */
+}
+
+/* Custom Link Styling */
+a {
+	color: #C51D4A;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+a:hover, a:active {
+	color: #232E9B;
+	box-sizing: border-box;
+}
+
+/* Table Styling */
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+	box-sizing: border-box;
+}
+
+.table th, 
+.table td {
+	border: 2px solid #222222;
+	padding: 10px;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+/* Specific adjustments for lists to ensure alignment with other text */
+ul, ol {
+	color: #222222 !important; /* Match body text color */
+	font-size: 16px; /* Same font size as body text */
+	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
+	line-height: 1.6 !important; /* Match line-height for readability */
+	margin-left: 40px !important; /* Indent the list items */
+	margin-right: 40px !important;
+	margin-bottom: 20px !important; /* Add spacing after the list */
+	list-style: disc; /* Add default bullet points */
+}
+
+/* General list item styling */
+ul li, ol li {
+	margin-bottom: 0px !important; /* Add spacing between list items */
+}
