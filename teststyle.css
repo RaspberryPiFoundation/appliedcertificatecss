@@ -32,7 +32,7 @@
 
 /* Block-specific styling for proper alignment of icon and title */
 .notes, .task, .learn {
-	display: inline-flex; /* Align icon and title in a single row */
+	display: flex; /* Align icon, title, and content in a single row */
 	align-items: center; /* Vertically align items */
 	position: relative; /* Keep relative positioning for pseudo-elements */
 	padding: 20px; /* Add padding for consistent spacing */
@@ -58,25 +58,46 @@
 	border: 2px solid #CD2355;
 }
 
-/* Icon styling for blocks */
-.learn::before, .notes::before, .task::before {
-	content: attr(data-title); /* Set title for testing alignment */
-	font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
+/* Unique icon styling for blocks */
+.learn::before {
+	content: "\f02d"; /* Font Awesome book icon */
+	font-family: "Font Awesome 6 Free"; /* Use Font Awesome for icons */
 	font-weight: 900; /* Bold solid icons */
 	font-size: 24px; /* Icon size */
-	color: inherit; /* Inherit block-specific colors */
-	margin-right: 8px; /* Space between icon and title text */
-	display: inline-block; /* Inline-block for proper alignment */
+	color: #CD2355; /* Color specific to Learn block */
+	margin-right: 8px; /* Space between icon and text */
+	display: inline-block; /* Align icon with text */
+}
+
+.notes::before {
+	content: "\f27a"; /* Font Awesome comment icon */
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	font-size: 24px;
+	color: #317C35; /* Color specific to Notes block */
+	margin-right: 8px;
+	display: inline-block;
+}
+
+.task::before {
+	content: "\f14a"; /* Font Awesome tick icon */
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	font-size: 24px;
+	color: #6B3687; /* Color specific to Task block */
+	margin-right: 8px;
+	display: inline-block;
 }
 
 /* Title text styling for blocks */
 .learn::after, .notes::after, .task::after {
-	content: attr(data-title); /* Set title text */
-	font-family: 'Quicksand', sans-serif; /* Font for title text */
+	content: attr(data-title); /* Title text */
+	font-family: 'Quicksand', sans-serif; /* Use your preferred font */
 	font-size: 24px; /* Font size for title text */
 	font-weight: 900; /* Bold for emphasis */
 	color: inherit; /* Match block-specific colors */
-	display: inline; /* Ensure proper alignment with the icon */
+	margin-left: 8px; /* Space between icon and title */
+	display: inline-block; /* Align text with the icon */
 }
 
 /* Style for h2 within the blocks */
