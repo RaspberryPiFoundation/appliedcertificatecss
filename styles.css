@@ -33,7 +33,7 @@
 }
 
 /* Block styling for alignment */
-.notes, .task, .learn {
+.notes, .task, .learn, .transcript, .video {
 	position: relative;
 	align-items: center; /* Vertically align icon and title */
 	padding: 20px; /* Add consistent padding */
@@ -46,7 +46,7 @@
 }
 
 /* Icon styling */
-.notes::before, .task::before, .learn::before {
+.notes::before, .task::before, .learn::before, .transcript::before, .video::before {
 	font-family: "Font Awesome 6 Free"; /* Font Awesome for icons */
 	font-weight: 900; /* Solid icons */
 	font-size: 24px; /* Icon size */
@@ -57,7 +57,7 @@
 }
 
 /* Title text styles */
-.learn::after, .notes::after, .task::after {
+.learn::after, .notes::after, .task::after, .transcript::after, .video::after {
 	content: attr(data-title); /* Pull title text dynamically */
 	position: absolute;
 	top: 15px !important;
@@ -76,7 +76,13 @@
 }
 
 .learn::before {
-	content: "\f02d"; /* Book icon */
+	content: "\f02d"; /* Font Awesome Book icon */
+}
+
+.transcript {
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
+	color: #CD2355; /* Title and icon color */
 }
 
 .notes {
@@ -86,7 +92,7 @@
 }
 
 .notes::before {
-	content: "\f27a"; /* Comment icon */
+	content: "\f27a"; /* Font Awesome Comment icon */
 }
 
 .task {
@@ -96,7 +102,30 @@
 }
 
 .task::before {
-	content: "\f14a"; /* Tick box icon */
+	content: "\f14a"; /* Font Awesome Tick box icon */
+}
+
+.video::before {
+	content: "\f03d"; /* Font Awesome play icon */
+}
+
+/* Center-align iframe inside the Video Block */
+.video-block iframe {
+    display: block; /* Ensures proper alignment */
+    margin: 0 auto; /* Center horizontally */
+    background-color: #F4EEF7; /* Background color for iframe area */
+    padding: 0; /* Remove extra padding */
+    border: none; /* No border on iframe */
+}
+
+.transcript {
+	background-color: #F4EEF7;
+	border: 2px solid #6B3687;
+	color: #CD2355; /* Title and icon color */
+}
+
+.transcript::before {
+	content: "\f70e"; /* Font Awesome Scroll icon */
 }
 
 /* h2 Header styling specific to blocks */
@@ -130,8 +159,19 @@
 	text-transform: none !important; /* Remove forced uppercase */
 }
 
+/* h2 styling specific to Transcript Block */
+.transcript h2, .video h2 {
+    color: #CD2355 !important; /* Transcript header color */
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+    text-transform: none !important;
+}
+
 /* h3 Header styling specific to blocks */
-.notes h3, .task h3, .learn h3 {
+.notes h3, .task h3, .learn h3, .video h3, .transcript h3 {
 	color: #222222 !important;
 	font-family: 'Quicksand', sans-serif !important;
 	font-size: 20px !important;
@@ -142,7 +182,7 @@
 }
 
 /* Paragraph styling */
-.notes p, .task p, .learn p {
+.notes p, .task p, .learn p, .video p, .transcript p {
     font-family: 'Quicksand', sans-serif !important;
     margin-top: 10px !important;
     color: #222222 !important;
