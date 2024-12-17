@@ -79,12 +79,6 @@
 	content: "\f02d"; /* Font Awesome Book icon */
 }
 
-.transcript {
-	background-color: #F4EEF7;
-	border: 2px solid #6B3687;
-	color: #CD2355; /* Title and icon color */
-}
-
 .notes {
 	background-color: #EDF7EE;
 	border: 2px solid #317C35;
@@ -109,19 +103,25 @@
 	content: "\f03d"; /* Font Awesome play icon */
 }
 
+.video {
+	background-color: #FFF3E6;
+	border: 2px solid #FD8D16;
+	color: #FD8D16; /* Title and icon color */
+}
+
 /* Center-align iframe inside the Video Block */
 .video iframe {
     display: block; /* Ensures proper alignment */
     margin: 0 auto; /* Center horizontally */
-    background-color: #F4EEF7; /* Background color for iframe area */
+    background-color: #FFF3E6; /* Background color for iframe area */
     padding: 0; /* Remove extra padding */
     border: none; /* No border on iframe */
 }
 
 .transcript {
-	background-color: #F4EEF7;
-	border: 2px solid #6B3687;
-	color: #CD2355; /* Title and icon color */
+	background-color: #FFF3E6;
+	border: 2px solid #FD8D16;
+	color: #FD8D16; /* Title and icon color */
 }
 
 .transcript::before {
