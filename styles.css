@@ -110,7 +110,7 @@
 }
 
 /* Center-align iframe inside the Video Block */
-.video-block iframe {
+.video iframe {
     display: block; /* Ensures proper alignment */
     margin: 0 auto; /* Center horizontally */
     background-color: #F4EEF7; /* Background color for iframe area */
