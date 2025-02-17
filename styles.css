@@ -395,17 +395,27 @@ a:hover, a:active {
 
 /* Specific adjustments for lists to ensure alignment with other text */
 ul, ol {
-	color: #222222 !important; /* Match body text color */
-	font-size: 16px; /* Same font size as body text */
-	font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
-	line-height: 1.6 !important; /* Match line-height for readability */
-	margin-left: 40px !important; /* Indent the list items */
-	margin-right: 40px !important;
-	margin-bottom: 20px !important; /* Add spacing after the list */
-	list-style: disc; /* Add default bullet points */
+    color: #222222 !important; /* Match body text color */
+    font-size: 16px; /* Same font size as body text */
+    font-family: 'Quicksand', sans-serif !important; /* Apply the same font */
+    line-height: 1.6 !important; /* Match line-height for readability */
+    margin-left: 20px !important; /* Reduce indentation slightly */
+    margin-right: 20px !important;
+    margin-bottom: 20px !important; /* Add spacing after the list */
+}
+
+/* Bullet styling for unordered lists */
+ul {
+    list-style-type: disc !important; /* Ensure unordered lists use bullets */
+}
+
+/* Ensure ordered lists (numbered) remain default */
+ol {
+    list-style-type: decimal !important; /* Ensure ordered lists use numbers */
 }
 
 /* General list item styling */
 ul li, ol li {
-	margin-bottom: 0px !important; /* Add spacing between list items */
+    margin-bottom: 0px !important; /* Add spacing between list items */
 }
+
