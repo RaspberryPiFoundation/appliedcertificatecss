@@ -364,19 +364,33 @@ a:hover, a:active {
 }
 
 /* Table Styling */
+
+/* General Table Styling */
 .table {
-	width: 100%;
-	border-collapse: collapse;
-	margin: 20px 0;
-	box-sizing: border-box;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-sizing: border-box;
+    border: 2px solid #CD2355 !important; /* Outer table border */
 }
 
+/* Header Row Styling */
+.table th {
+    background-color: #CD2355 !important; /* Header row background */
+    color: white !important; /* Header row text color */
+    font-weight: bold !important; /* Make header text bold */
+    padding: 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Table Cell Styling */
 .table th, 
 .table td {
-	border: 2px solid #222222;
-	padding: 10px;
-	text-align: left;
-	box-sizing: border-box;
+    border: 1px solid #CD2355 !important; /* 1px border around all cells */
+    padding: 10px;
+    text-align: left;
+    box-sizing: border-box;
 }
 
 /* Specific adjustments for lists to ensure alignment with other text */
