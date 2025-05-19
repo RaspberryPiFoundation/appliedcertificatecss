@@ -68,8 +68,8 @@
 
 /* Specific block styles */
 .learn {
-	background-color: #FCF3F6;
-	border: 2px solid #CD2355;
+	background-color: #fafafa;
+	border: 3px solid #CD2355;
 	color: #CD2355; /* Title text and icon color */
 }
 
@@ -78,8 +78,8 @@
 }
 
 .notes {
-	background-color: #EDF7EE;
-	border: 2px solid #317C35;
+	background-color: #fafafa;
+	border: 3px solid #317C35;
 	color: #317C35;
 }
 
@@ -88,8 +88,8 @@
 }
 
 .task {
-	background-color: #F4EEF7;
-	border: 2px solid #6B3687;
+	background-color: #fafafa;
+	border: 3px solid #6B3687;
 	color: #6B3687;
 }
 
